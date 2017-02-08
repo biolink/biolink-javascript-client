@@ -87,18 +87,6 @@
 
   // Implement APageOfResults interface:
   /**
-   * Number of items per page of results
-   * @member {Integer} per_page
-   */
-exports.prototype['per_page'] = undefined;
-
-  /**
-   * Total number of results
-   * @member {Integer} total
-   */
-exports.prototype['total'] = undefined;
-
-  /**
    * Number of this page of results
    * @member {Integer} page
    */
@@ -109,6 +97,18 @@ exports.prototype['page'] = undefined;
    * @member {Integer} pages
    */
 exports.prototype['pages'] = undefined;
+
+  /**
+   * Number of items per page of results
+   * @member {Integer} per_page
+   */
+exports.prototype['per_page'] = undefined;
+
+  /**
+   * Total number of results
+   * @member {Integer} total
+   */
+exports.prototype['total'] = undefined;
 
 
 

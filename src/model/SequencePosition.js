@@ -71,24 +71,24 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('reference')) {
-        obj['reference'] = ApiClient.convertToType(data['reference'], 'String');
-      }
       if (data.hasOwnProperty('position')) {
         obj['position'] = ApiClient.convertToType(data['position'], 'Integer');
+      }
+      if (data.hasOwnProperty('reference')) {
+        obj['reference'] = ApiClient.convertToType(data['reference'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} reference
-   */
-  exports.prototype['reference'] = undefined;
-  /**
    * @member {Integer} position
    */
   exports.prototype['position'] = undefined;
+  /**
+   * @member {String} reference
+   */
+  exports.prototype['reference'] = undefined;
 
 
 

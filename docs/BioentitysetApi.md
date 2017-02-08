@@ -25,10 +25,10 @@ var BioLinkApi = require('bio_link_api');
 var apiInstance = new BioLinkApi.BioentitysetApi();
 
 var opts = { 
-  'objectSlim': "objectSlim_example", // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
   'objectCategory': "objectCategory_example", // String | E.g. phenotype, function
   'subject': ["subject_example"], // [String] | Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
-  'background': ["background_example"] // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'background': ["background_example"], // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'objectSlim': "objectSlim_example" // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
 };
 
 var callback = function(error, data, response) {
@@ -45,10 +45,10 @@ apiInstance.getEntitySetAssociations(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
  **objectCategory** | **String**| E.g. phenotype, function | [optional] 
  **subject** | [**[String]**](String.md)| Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387 | [optional] 
  **background** | [**[String]**](String.md)| Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests | [optional] 
+ **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
 
 ### Return type
 
@@ -76,10 +76,10 @@ var BioLinkApi = require('bio_link_api');
 var apiInstance = new BioLinkApi.BioentitysetApi();
 
 var opts = { 
-  'objectSlim': "objectSlim_example", // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
   'objectCategory': "objectCategory_example", // String | E.g. phenotype, function
   'subject': ["subject_example"], // [String] | Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
-  'background': ["background_example"] // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'background': ["background_example"], // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'objectSlim': "objectSlim_example" // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
 };
 
 var callback = function(error, data, response) {
@@ -96,10 +96,10 @@ apiInstance.getEntitySetGraphResource(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
  **objectCategory** | **String**| E.g. phenotype, function | [optional] 
  **subject** | [**[String]**](String.md)| Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387 | [optional] 
  **background** | [**[String]**](String.md)| Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests | [optional] 
+ **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
 
 ### Return type
 
@@ -127,10 +127,10 @@ var BioLinkApi = require('bio_link_api');
 var apiInstance = new BioLinkApi.BioentitysetApi();
 
 var opts = { 
-  'objectSlim': "objectSlim_example", // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
   'objectCategory': "objectCategory_example", // String | E.g. phenotype, function
   'subject': ["subject_example"], // [String] | Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
-  'background': ["background_example"] // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'background': ["background_example"], // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'objectSlim': "objectSlim_example" // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
 };
 
 var callback = function(error, data, response) {
@@ -147,10 +147,10 @@ apiInstance.getEntitySetHomologsDeprecated(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
  **objectCategory** | **String**| E.g. phenotype, function | [optional] 
  **subject** | [**[String]**](String.md)| Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387 | [optional] 
  **background** | [**[String]**](String.md)| Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests | [optional] 
+ **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
 
 ### Return type
 
@@ -182,9 +182,9 @@ var objectCategory = "objectCategory_example"; // String | CATEGORY of entity at
 var objectCategory2 = "objectCategory_example"; // String | E.g. phenotype, function
 
 var opts = { 
-  'objectSlim': "objectSlim_example", // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
   'subject': ["subject_example"], // [String] | Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
-  'background': ["background_example"] // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'background': ["background_example"], // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'objectSlim': "objectSlim_example" // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
 };
 
 var callback = function(error, data, response) {
@@ -203,9 +203,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **objectCategory** | **String**| CATEGORY of entity at link OBJECT (target), e.g. phenotype, disease | 
  **objectCategory2** | **String**| E.g. phenotype, function | 
- **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
  **subject** | [**[String]**](String.md)| Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387 | [optional] 
  **background** | [**[String]**](String.md)| Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests | [optional] 
+ **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
 
 ### Return type
 
@@ -237,9 +237,9 @@ var objectCategory = "objectCategory_example"; // String | CATEGORY of entity at
 var objectCategory2 = "objectCategory_example"; // String | E.g. phenotype, function
 
 var opts = { 
-  'objectSlim': "objectSlim_example", // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
   'subject': ["subject_example"], // [String] | Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
-  'background': ["background_example"] // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'background': ["background_example"], // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'objectSlim': "objectSlim_example" // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
 };
 
 var callback = function(error, data, response) {
@@ -258,9 +258,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **objectCategory** | **String**| CATEGORY of entity at link OBJECT (target), e.g. phenotype, disease | 
  **objectCategory2** | **String**| E.g. phenotype, function | 
- **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
  **subject** | [**[String]**](String.md)| Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387 | [optional] 
  **background** | [**[String]**](String.md)| Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests | [optional] 
+ **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
 
 ### Return type
 
@@ -288,10 +288,10 @@ var BioLinkApi = require('bio_link_api');
 var apiInstance = new BioLinkApi.BioentitysetApi();
 
 var opts = { 
-  'objectSlim': "objectSlim_example", // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
   'objectCategory': "objectCategory_example", // String | E.g. phenotype, function
   'subject': ["subject_example"], // [String] | Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
-  'background': ["background_example"] // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'background': ["background_example"], // [String] | Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+  'objectSlim': "objectSlim_example" // String | Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
 };
 
 var callback = function(error, data, response) {
@@ -308,10 +308,10 @@ apiInstance.getEntitySetSummary(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
  **objectCategory** | **String**| E.g. phenotype, function | [optional] 
  **subject** | [**[String]**](String.md)| Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387 | [optional] 
  **background** | [**[String]**](String.md)| Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests | [optional] 
+ **objectSlim** | **String**| Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED | [optional] 
 
 ### Return type
 

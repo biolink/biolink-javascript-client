@@ -74,33 +74,32 @@
       obj = obj || new exports();
 
       NamedObject.constructFromObject(data, obj);
-      if (data.hasOwnProperty('xrefs')) {
-        obj['xrefs'] = ApiClient.convertToType(data['xrefs'], ['String']);
-      }
       if (data.hasOwnProperty('taxon')) {
         obj['taxon'] = Taxon.constructFromObject(data['taxon']);
+      }
+      if (data.hasOwnProperty('xrefs')) {
+        obj['xrefs'] = ApiClient.convertToType(data['xrefs'], ['String']);
       }
     }
     return obj;
   }
 
   /**
-   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
-   * @member {Array.<String>} xrefs
-   */
-  exports.prototype['xrefs'] = undefined;
-  /**
    * Taxon to which the object belongs
    * @member {module:model/Taxon} taxon
    */
   exports.prototype['taxon'] = undefined;
+  /**
+   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
+   * @member {Array.<String>} xrefs
+   */
+  exports.prototype['xrefs'] = undefined;
 
   // Implement NamedObject interface:
   /**
-   * RDFS Label
-   * @member {String} label
+   * @member {Array.<String>} categories
    */
-exports.prototype['label'] = undefined;
+exports.prototype['categories'] = undefined;
 
   /**
    * ID or CURIE e.g. MGI:1201606
@@ -109,9 +108,10 @@ exports.prototype['label'] = undefined;
 exports.prototype['id'] = undefined;
 
   /**
-   * @member {Array.<String>} categories
+   * RDFS Label
+   * @member {String} label
    */
-exports.prototype['categories'] = undefined;
+exports.prototype['label'] = undefined;
 
 
 

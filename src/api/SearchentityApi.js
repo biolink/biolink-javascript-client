@@ -68,11 +68,11 @@
      * Returns list of matches
      * @param {String} term 
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.weightedAttribute weighted attributes, specified as a range from 0 to 1 plus an ontology term, e.g. 0.3*HP:0000001
-     * @param {Array.<String>} opts.attribute positive attributes, e.g. ontology terms, to include in query
-     * @param {Boolean} opts.noise If set, uses noise-tolerant querying, e.g owlsim, boqa
      * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Array.<String>} opts.attribute positive attributes, e.g. ontology terms, to include in query
+     * @param {Array.<String>} opts.weightedAttribute weighted attributes, specified as a range from 0 to 1 plus an ontology term, e.g. 0.3*HP:0000001
      * @param {Array.<String>} opts.negativeAttribute negative attributes, e.g. ontology terms, to exclude in query
+     * @param {Boolean} opts.noise If set, uses noise-tolerant querying, e.g owlsim, boqa
      * @param {module:api/SearchentityApi~getAuthocompleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -90,11 +90,11 @@
         'term': term
       };
       var queryParams = {
-        'weighted_attribute': this.apiClient.buildCollectionParam(opts['weightedAttribute'], 'multi'),
-        'attribute': this.apiClient.buildCollectionParam(opts['attribute'], 'multi'),
-        'noise': opts['noise'],
         'subject_taxon': opts['subjectTaxon'],
-        'negative_attribute': this.apiClient.buildCollectionParam(opts['negativeAttribute'], 'multi')
+        'attribute': this.apiClient.buildCollectionParam(opts['attribute'], 'multi'),
+        'weighted_attribute': this.apiClient.buildCollectionParam(opts['weightedAttribute'], 'multi'),
+        'negative_attribute': this.apiClient.buildCollectionParam(opts['negativeAttribute'], 'multi'),
+        'noise': opts['noise']
       };
       var headerParams = {
       };
@@ -124,11 +124,11 @@
     /**
      * Returns list of matches
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.weightedAttribute weighted attributes, specified as a range from 0 to 1 plus an ontology term, e.g. 0.3*HP:0000001
-     * @param {Array.<String>} opts.attribute positive attributes, e.g. ontology terms, to include in query
-     * @param {Boolean} opts.noise If set, uses noise-tolerant querying, e.g owlsim, boqa
      * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Array.<String>} opts.attribute positive attributes, e.g. ontology terms, to include in query
+     * @param {Array.<String>} opts.weightedAttribute weighted attributes, specified as a range from 0 to 1 plus an ontology term, e.g. 0.3*HP:0000001
      * @param {Array.<String>} opts.negativeAttribute negative attributes, e.g. ontology terms, to exclude in query
+     * @param {Boolean} opts.noise If set, uses noise-tolerant querying, e.g owlsim, boqa
      * @param {module:api/SearchentityApi~getAuthocomplete_0Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -140,11 +140,11 @@
       var pathParams = {
       };
       var queryParams = {
-        'weighted_attribute': this.apiClient.buildCollectionParam(opts['weightedAttribute'], 'multi'),
-        'attribute': this.apiClient.buildCollectionParam(opts['attribute'], 'multi'),
-        'noise': opts['noise'],
         'subject_taxon': opts['subjectTaxon'],
-        'negative_attribute': this.apiClient.buildCollectionParam(opts['negativeAttribute'], 'multi')
+        'attribute': this.apiClient.buildCollectionParam(opts['attribute'], 'multi'),
+        'weighted_attribute': this.apiClient.buildCollectionParam(opts['weightedAttribute'], 'multi'),
+        'negative_attribute': this.apiClient.buildCollectionParam(opts['negativeAttribute'], 'multi'),
+        'noise': opts['noise']
       };
       var headerParams = {
       };
@@ -175,11 +175,11 @@
      * Returns list of matches
      * @param {String} term 
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.weightedAttribute weighted attributes, specified as a range from 0 to 1 plus an ontology term, e.g. 0.3*HP:0000001
-     * @param {Array.<String>} opts.attribute positive attributes, e.g. ontology terms, to include in query
-     * @param {Boolean} opts.noise If set, uses noise-tolerant querying, e.g owlsim, boqa
      * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Array.<String>} opts.attribute positive attributes, e.g. ontology terms, to include in query
+     * @param {Array.<String>} opts.weightedAttribute weighted attributes, specified as a range from 0 to 1 plus an ontology term, e.g. 0.3*HP:0000001
      * @param {Array.<String>} opts.negativeAttribute negative attributes, e.g. ontology terms, to exclude in query
+     * @param {Boolean} opts.noise If set, uses noise-tolerant querying, e.g owlsim, boqa
      * @param {module:api/SearchentityApi~getSearchEntitiesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -197,11 +197,11 @@
         'term': term
       };
       var queryParams = {
-        'weighted_attribute': this.apiClient.buildCollectionParam(opts['weightedAttribute'], 'multi'),
-        'attribute': this.apiClient.buildCollectionParam(opts['attribute'], 'multi'),
-        'noise': opts['noise'],
         'subject_taxon': opts['subjectTaxon'],
-        'negative_attribute': this.apiClient.buildCollectionParam(opts['negativeAttribute'], 'multi')
+        'attribute': this.apiClient.buildCollectionParam(opts['attribute'], 'multi'),
+        'weighted_attribute': this.apiClient.buildCollectionParam(opts['weightedAttribute'], 'multi'),
+        'negative_attribute': this.apiClient.buildCollectionParam(opts['negativeAttribute'], 'multi'),
+        'noise': opts['noise']
       };
       var headerParams = {
       };

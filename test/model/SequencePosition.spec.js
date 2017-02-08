@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.SequencePosition);
     });
 
-    it('should have the property reference (base name: "reference")', function() {
-      // uncomment below and update the code to test the property reference
+    it('should have the property position (base name: "position")', function() {
+      // uncomment below and update the code to test the property position
       //var instane = new BioLinkApi.SequencePosition();
       //expect(instance).to.be();
     });
 
-    it('should have the property position (base name: "position")', function() {
-      // uncomment below and update the code to test the property position
+    it('should have the property reference (base name: "reference")', function() {
+      // uncomment below and update the code to test the property reference
       //var instane = new BioLinkApi.SequencePosition();
       //expect(instance).to.be();
     });

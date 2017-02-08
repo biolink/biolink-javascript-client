@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.Taxon);
     });
 
-    it('should have the property label (base name: "label")', function() {
-      // uncomment below and update the code to test the property label
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
       //var instane = new BioLinkApi.Taxon();
       //expect(instance).to.be();
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
+    it('should have the property label (base name: "label")', function() {
+      // uncomment below and update the code to test the property label
       //var instane = new BioLinkApi.Taxon();
       //expect(instance).to.be();
     });

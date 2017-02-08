@@ -72,11 +72,11 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('val')) {
-        obj['val'] = ApiClient.convertToType(data['val'], 'String');
-      }
       if (data.hasOwnProperty('pred')) {
         obj['pred'] = ApiClient.convertToType(data['pred'], 'String');
+      }
+      if (data.hasOwnProperty('val')) {
+        obj['val'] = ApiClient.convertToType(data['val'], 'String');
       }
       if (data.hasOwnProperty('xrefs')) {
         obj['xrefs'] = ApiClient.convertToType(data['xrefs'], ['String']);
@@ -86,15 +86,15 @@
   }
 
   /**
-   * value part
-   * @member {String} val
-   */
-  exports.prototype['val'] = undefined;
-  /**
    * predicate (attribute) part
    * @member {String} pred
    */
   exports.prototype['pred'] = undefined;
+  /**
+   * value part
+   * @member {String} val
+   */
+  exports.prototype['val'] = undefined;
   /**
    * Xrefs provenance for property-value
    * @member {Array.<String>} xrefs

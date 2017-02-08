@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.Association);
     });
 
-    it('should have the property evidenceTypes (base name: "evidence_types")', function() {
-      // uncomment below and update the code to test the property evidenceTypes
+    it('should have the property evidenceGraph (base name: "evidence_graph")', function() {
+      // uncomment below and update the code to test the property evidenceGraph
       //var instane = new BioLinkApi.Association();
       //expect(instance).to.be();
     });
 
-    it('should have the property evidenceGraph (base name: "evidence_graph")', function() {
-      // uncomment below and update the code to test the property evidenceGraph
+    it('should have the property evidenceTypes (base name: "evidence_types")', function() {
+      // uncomment below and update the code to test the property evidenceTypes
       //var instane = new BioLinkApi.Association();
       //expect(instance).to.be();
     });
@@ -83,8 +83,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property relation (base name: "relation")', function() {
-      // uncomment below and update the code to test the property relation
+    it('should have the property _object (base name: "object")', function() {
+      // uncomment below and update the code to test the property _object
+      //var instane = new BioLinkApi.Association();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property objectExtension (base name: "object_extension")', function() {
+      // uncomment below and update the code to test the property objectExtension
       //var instane = new BioLinkApi.Association();
       //expect(instance).to.be();
     });
@@ -101,20 +107,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property objectExtension (base name: "object_extension")', function() {
-      // uncomment below and update the code to test the property objectExtension
-      //var instane = new BioLinkApi.Association();
-      //expect(instance).to.be();
-    });
-
     it('should have the property qualifiers (base name: "qualifiers")', function() {
       // uncomment below and update the code to test the property qualifiers
       //var instane = new BioLinkApi.Association();
       //expect(instance).to.be();
     });
 
-    it('should have the property _object (base name: "object")', function() {
-      // uncomment below and update the code to test the property _object
+    it('should have the property relation (base name: "relation")', function() {
+      // uncomment below and update the code to test the property relation
+      //var instane = new BioLinkApi.Association();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property slim (base name: "slim")', function() {
+      // uncomment below and update the code to test the property slim
       //var instane = new BioLinkApi.Association();
       //expect(instance).to.be();
     });
@@ -125,14 +131,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property subjectExtension (base name: "subject_extension")', function() {
+      // uncomment below and update the code to test the property subjectExtension
       //var instane = new BioLinkApi.Association();
       //expect(instance).to.be();
     });
 
-    it('should have the property subjectExtension (base name: "subject_extension")', function() {
-      // uncomment below and update the code to test the property subjectExtension
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new BioLinkApi.Association();
       //expect(instance).to.be();
     });

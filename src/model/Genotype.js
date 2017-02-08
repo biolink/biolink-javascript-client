@@ -76,8 +76,8 @@
       obj = obj || new exports();
 
       BioObject.constructFromObject(data, obj);
-      if (data.hasOwnProperty('variant_associations')) {
-        obj['variant_associations'] = ApiClient.convertToType(data['variant_associations'], [Association]);
+      if (data.hasOwnProperty('disease_associations')) {
+        obj['disease_associations'] = ApiClient.convertToType(data['disease_associations'], [Association]);
       }
       if (data.hasOwnProperty('gene_associations')) {
         obj['gene_associations'] = ApiClient.convertToType(data['gene_associations'], [Association]);
@@ -85,17 +85,17 @@
       if (data.hasOwnProperty('phenotype_associations')) {
         obj['phenotype_associations'] = ApiClient.convertToType(data['phenotype_associations'], [Association]);
       }
-      if (data.hasOwnProperty('disease_associations')) {
-        obj['disease_associations'] = ApiClient.convertToType(data['disease_associations'], [Association]);
+      if (data.hasOwnProperty('variant_associations')) {
+        obj['variant_associations'] = ApiClient.convertToType(data['variant_associations'], [Association]);
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/Association>} variant_associations
+   * @member {Array.<module:model/Association>} disease_associations
    */
-  exports.prototype['variant_associations'] = undefined;
+  exports.prototype['disease_associations'] = undefined;
   /**
    * @member {Array.<module:model/Association>} gene_associations
    */
@@ -105,16 +105,15 @@
    */
   exports.prototype['phenotype_associations'] = undefined;
   /**
-   * @member {Array.<module:model/Association>} disease_associations
+   * @member {Array.<module:model/Association>} variant_associations
    */
-  exports.prototype['disease_associations'] = undefined;
+  exports.prototype['variant_associations'] = undefined;
 
   // Implement BioObject interface:
   /**
-   * RDFS Label
-   * @member {String} label
+   * @member {Array.<String>} categories
    */
-exports.prototype['label'] = undefined;
+exports.prototype['categories'] = undefined;
 
   /**
    * ID or CURIE e.g. MGI:1201606
@@ -123,21 +122,22 @@ exports.prototype['label'] = undefined;
 exports.prototype['id'] = undefined;
 
   /**
-   * @member {Array.<String>} categories
+   * RDFS Label
+   * @member {String} label
    */
-exports.prototype['categories'] = undefined;
-
-  /**
-   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
-   * @member {Array.<String>} xrefs
-   */
-exports.prototype['xrefs'] = undefined;
+exports.prototype['label'] = undefined;
 
   /**
    * Taxon to which the object belongs
    * @member {module:model/Taxon} taxon
    */
 exports.prototype['taxon'] = undefined;
+
+  /**
+   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
+   * @member {Array.<String>} xrefs
+   */
+exports.prototype['xrefs'] = undefined;
 
 
 

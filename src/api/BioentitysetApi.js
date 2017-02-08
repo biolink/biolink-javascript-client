@@ -67,10 +67,10 @@
     /**
      * Returns compact associations for a given input set
      * @param {Object} opts Optional parameters
-     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {String} opts.objectCategory E.g. phenotype, function
      * @param {Array.<String>} opts.subject Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
      * @param {Array.<String>} opts.background Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {module:api/BioentitysetApi~getEntitySetAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -82,10 +82,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'object_slim': opts['objectSlim'],
         'object_category': opts['objectCategory'],
         'subject': this.apiClient.buildCollectionParam(opts['subject'], 'multi'),
-        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi')
+        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi'),
+        'object_slim': opts['objectSlim']
       };
       var headerParams = {
       };
@@ -115,10 +115,10 @@
     /**
      * TODO Graph object spanning all entities
      * @param {Object} opts Optional parameters
-     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {String} opts.objectCategory E.g. phenotype, function
      * @param {Array.<String>} opts.subject Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
      * @param {Array.<String>} opts.background Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {module:api/BioentitysetApi~getEntitySetGraphResourceCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getEntitySetGraphResource = function(opts, callback) {
@@ -129,10 +129,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'object_slim': opts['objectSlim'],
         'object_category': opts['objectCategory'],
         'subject': this.apiClient.buildCollectionParam(opts['subject'], 'multi'),
-        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi')
+        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi'),
+        'object_slim': opts['objectSlim']
       };
       var headerParams = {
       };
@@ -162,10 +162,10 @@
     /**
      * Returns homology associations for a given input set of genes
      * @param {Object} opts Optional parameters
-     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {String} opts.objectCategory E.g. phenotype, function
      * @param {Array.<String>} opts.subject Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
      * @param {Array.<String>} opts.background Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {module:api/BioentitysetApi~getEntitySetHomologsDeprecatedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -177,10 +177,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'object_slim': opts['objectSlim'],
         'object_category': opts['objectCategory'],
         'subject': this.apiClient.buildCollectionParam(opts['subject'], 'multi'),
-        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi')
+        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi'),
+        'object_slim': opts['objectSlim']
       };
       var headerParams = {
       };
@@ -212,9 +212,9 @@
      * @param {String} objectCategory CATEGORY of entity at link OBJECT (target), e.g. phenotype, disease
      * @param {String} objectCategory2 E.g. phenotype, function
      * @param {Object} opts Optional parameters
-     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {Array.<String>} opts.subject Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
      * @param {Array.<String>} opts.background Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {module:api/BioentitysetApi~getEntitySetOverRepresentationAnalysisCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getEntitySetOverRepresentationAnalysis = function(objectCategory, objectCategory2, opts, callback) {
@@ -236,10 +236,10 @@
         'object_category': objectCategory
       };
       var queryParams = {
-        'object_slim': opts['objectSlim'],
         'object_category': objectCategory2,
         'subject': this.apiClient.buildCollectionParam(opts['subject'], 'multi'),
-        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi')
+        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi'),
+        'object_slim': opts['objectSlim']
       };
       var headerParams = {
       };
@@ -271,9 +271,9 @@
      * @param {String} objectCategory CATEGORY of entity at link OBJECT (target), e.g. phenotype, disease
      * @param {String} objectCategory2 E.g. phenotype, function
      * @param {Object} opts Optional parameters
-     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {Array.<String>} opts.subject Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
      * @param {Array.<String>} opts.background Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {module:api/BioentitysetApi~getEntitySetOverRepresentationAnalysis_0Callback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getEntitySetOverRepresentationAnalysis_0 = function(objectCategory, objectCategory2, opts, callback) {
@@ -295,10 +295,10 @@
         'object_category': objectCategory
       };
       var queryParams = {
-        'object_slim': opts['objectSlim'],
         'object_category': objectCategory2,
         'subject': this.apiClient.buildCollectionParam(opts['subject'], 'multi'),
-        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi')
+        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi'),
+        'object_slim': opts['objectSlim']
       };
       var headerParams = {
       };
@@ -328,10 +328,10 @@
     /**
      * Summary statistics for objects associated
      * @param {Object} opts Optional parameters
-     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {String} opts.objectCategory E.g. phenotype, function
      * @param {Array.<String>} opts.subject Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
      * @param {Array.<String>} opts.background Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+     * @param {String} opts.objectSlim Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
      * @param {module:api/BioentitysetApi~getEntitySetSummaryCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getEntitySetSummary = function(opts, callback) {
@@ -342,10 +342,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'object_slim': opts['objectSlim'],
         'object_category': opts['objectCategory'],
         'subject': this.apiClient.buildCollectionParam(opts['subject'], 'multi'),
-        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi')
+        'background': this.apiClient.buildCollectionParam(opts['background'], 'multi'),
+        'object_slim': opts['objectSlim']
       };
       var headerParams = {
       };

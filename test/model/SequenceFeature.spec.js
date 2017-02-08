@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.SequenceFeature);
     });
 
-    it('should have the property locations (base name: "locations")', function() {
-      // uncomment below and update the code to test the property locations
+    it('should have the property homologyAssociations (base name: "homology_associations")', function() {
+      // uncomment below and update the code to test the property homologyAssociations
       //var instane = new BioLinkApi.SequenceFeature();
       //expect(instance).to.be();
     });
 
-    it('should have the property homologyAssociations (base name: "homology_associations")', function() {
-      // uncomment below and update the code to test the property homologyAssociations
+    it('should have the property locations (base name: "locations")', function() {
+      // uncomment below and update the code to test the property locations
       //var instane = new BioLinkApi.SequenceFeature();
       //expect(instance).to.be();
     });

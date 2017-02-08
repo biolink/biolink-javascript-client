@@ -65,8 +65,8 @@
       //expect(instance).to.be.a(BioLinkApi.NamedObject);
     });
 
-    it('should have the property label (base name: "label")', function() {
-      // uncomment below and update the code to test the property label
+    it('should have the property categories (base name: "categories")', function() {
+      // uncomment below and update the code to test the property categories
       //var instane = new BioLinkApi.NamedObject();
       //expect(instance).to.be();
     });
@@ -77,8 +77,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property categories (base name: "categories")', function() {
-      // uncomment below and update the code to test the property categories
+    it('should have the property label (base name: "label")', function() {
+      // uncomment below and update the code to test the property label
       //var instane = new BioLinkApi.NamedObject();
       //expect(instance).to.be();
     });

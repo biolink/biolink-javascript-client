@@ -71,26 +71,26 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('nodes')) {
-        obj['nodes'] = ApiClient.convertToType(data['nodes'], [Node]);
-      }
       if (data.hasOwnProperty('edges')) {
         obj['edges'] = ApiClient.convertToType(data['edges'], [Edge]);
+      }
+      if (data.hasOwnProperty('nodes')) {
+        obj['nodes'] = ApiClient.convertToType(data['nodes'], [Node]);
       }
     }
     return obj;
   }
 
   /**
-   * All nodes in graph
-   * @member {Array.<module:model/Node>} nodes
-   */
-  exports.prototype['nodes'] = undefined;
-  /**
    * All edges in graph
    * @member {Array.<module:model/Edge>} edges
    */
   exports.prototype['edges'] = undefined;
+  /**
+   * All nodes in graph
+   * @member {Array.<module:model/Node>} nodes
+   */
+  exports.prototype['nodes'] = undefined;
 
 
 

@@ -69,15 +69,15 @@
      * An association connects, at a minimum, two things, designated subject and object, via some relationship. Associations also include evidence, provenance etc.
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.rows number of rows (default to 10)
-     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
      * @param {String} opts.evidence Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                     
-     * @param {Integer} opts.page Page number (default to 1)
-     * @param {String} opts._object OBJECT id, e.g. HP:0011927. Includes inferred by default
-     * @param {String} opts.subject SUBJECT id, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357. Includes inferred by default
-     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
-     * @param {Boolean} opts.graphize If set, includes graph object in response
      * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
+     * @param {String} opts._object OBJECT id, e.g. HP:0011927. Includes inferred by default
+     * @param {Boolean} opts.graphize If set, includes graph object in response
+     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Integer} opts.page Page number (default to 1)
+     * @param {String} opts.subject SUBJECT id, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357. Includes inferred by default
+     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
+     * @param {Integer} opts.rows number of rows (default to 10)
      * @param {module:api/AssociationApi~getAssociationObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -95,15 +95,15 @@
         'id': id
       };
       var queryParams = {
-        'rows': opts['rows'],
-        'fl_excludes_evidence': opts['flExcludesEvidence'],
         'evidence': opts['evidence'],
-        'page': opts['page'],
+        'map_identifiers': opts['mapIdentifiers'],
         'object': opts['_object'],
-        'subject': opts['subject'],
-        'subject_taxon': opts['subjectTaxon'],
         'graphize': opts['graphize'],
-        'map_identifiers': opts['mapIdentifiers']
+        'subject_taxon': opts['subjectTaxon'],
+        'page': opts['page'],
+        'subject': opts['subject'],
+        'fl_excludes_evidence': opts['flExcludesEvidence'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -133,15 +133,15 @@
     /**
      * Returns list of matching associations
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.rows number of rows (default to 10)
-     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
      * @param {String} opts.evidence Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                     
-     * @param {Integer} opts.page Page number (default to 1)
-     * @param {String} opts._object OBJECT id, e.g. HP:0011927. Includes inferred by default
-     * @param {String} opts.subject SUBJECT id, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357. Includes inferred by default
-     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
-     * @param {Boolean} opts.graphize If set, includes graph object in response
      * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
+     * @param {String} opts._object OBJECT id, e.g. HP:0011927. Includes inferred by default
+     * @param {Boolean} opts.graphize If set, includes graph object in response
+     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Integer} opts.page Page number (default to 1)
+     * @param {String} opts.subject SUBJECT id, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357. Includes inferred by default
+     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
+     * @param {Integer} opts.rows number of rows (default to 10)
      * @param {module:api/AssociationApi~getAssociationSearchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -153,15 +153,15 @@
       var pathParams = {
       };
       var queryParams = {
-        'rows': opts['rows'],
-        'fl_excludes_evidence': opts['flExcludesEvidence'],
         'evidence': opts['evidence'],
-        'page': opts['page'],
+        'map_identifiers': opts['mapIdentifiers'],
         'object': opts['_object'],
-        'subject': opts['subject'],
-        'subject_taxon': opts['subjectTaxon'],
         'graphize': opts['graphize'],
-        'map_identifiers': opts['mapIdentifiers']
+        'subject_taxon': opts['subjectTaxon'],
+        'page': opts['page'],
+        'subject': opts['subject'],
+        'fl_excludes_evidence': opts['flExcludesEvidence'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -193,15 +193,15 @@
      * @param {String} objectCategory CATEGORY of entity at link OBJECT (target), e.g. phenotype, disease
      * @param {String} subjectCategory CATEGORY of entity at link SUBJECT (source), e.g. gene, disease, genotype
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.rows number of rows (default to 10)
-     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
      * @param {String} opts.evidence Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                     
-     * @param {Integer} opts.page Page number (default to 1)
-     * @param {String} opts._object OBJECT id, e.g. HP:0011927. Includes inferred by default
-     * @param {String} opts.subject SUBJECT id, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357. Includes inferred by default
-     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
-     * @param {Boolean} opts.graphize If set, includes graph object in response
      * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
+     * @param {String} opts._object OBJECT id, e.g. HP:0011927. Includes inferred by default
+     * @param {Boolean} opts.graphize If set, includes graph object in response
+     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Integer} opts.page Page number (default to 1)
+     * @param {String} opts.subject SUBJECT id, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357. Includes inferred by default
+     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
+     * @param {Integer} opts.rows number of rows (default to 10)
      * @param {module:api/AssociationApi~getAssociationSearch_0Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -225,15 +225,15 @@
         'subject_category': subjectCategory
       };
       var queryParams = {
-        'rows': opts['rows'],
-        'fl_excludes_evidence': opts['flExcludesEvidence'],
         'evidence': opts['evidence'],
-        'page': opts['page'],
+        'map_identifiers': opts['mapIdentifiers'],
         'object': opts['_object'],
-        'subject': opts['subject'],
-        'subject_taxon': opts['subjectTaxon'],
         'graphize': opts['graphize'],
-        'map_identifiers': opts['mapIdentifiers']
+        'subject_taxon': opts['subjectTaxon'],
+        'page': opts['page'],
+        'subject': opts['subject'],
+        'fl_excludes_evidence': opts['flExcludesEvidence'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -265,15 +265,15 @@
      * @param {String} objectCategory CATEGORY of entity at link OBJECT (target), e.g. phenotype, disease
      * @param {String} subjectCategory CATEGORY of entity at link SUBJECT (source), e.g. gene, disease, genotype
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.rows number of rows (default to 10)
-     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
      * @param {String} opts.evidence Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                     
-     * @param {Integer} opts.page Page number (default to 1)
-     * @param {String} opts._object OBJECT id, e.g. HP:0011927. Includes inferred by default
-     * @param {String} opts.subject SUBJECT id, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357. Includes inferred by default
-     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
-     * @param {Boolean} opts.graphize If set, includes graph object in response
      * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
+     * @param {String} opts._object OBJECT id, e.g. HP:0011927. Includes inferred by default
+     * @param {Boolean} opts.graphize If set, includes graph object in response
+     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Integer} opts.page Page number (default to 1)
+     * @param {String} opts.subject SUBJECT id, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357. Includes inferred by default
+     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
+     * @param {Integer} opts.rows number of rows (default to 10)
      * @param {module:api/AssociationApi~getAssociationSearch_1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -297,15 +297,15 @@
         'subject_category': subjectCategory
       };
       var queryParams = {
-        'rows': opts['rows'],
-        'fl_excludes_evidence': opts['flExcludesEvidence'],
         'evidence': opts['evidence'],
-        'page': opts['page'],
+        'map_identifiers': opts['mapIdentifiers'],
         'object': opts['_object'],
-        'subject': opts['subject'],
-        'subject_taxon': opts['subjectTaxon'],
         'graphize': opts['graphize'],
-        'map_identifiers': opts['mapIdentifiers']
+        'subject_taxon': opts['subjectTaxon'],
+        'page': opts['page'],
+        'subject': opts['subject'],
+        'fl_excludes_evidence': opts['flExcludesEvidence'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -335,52 +335,54 @@
     /**
      * Returns associations connecting two entities
      * Given two entities (e.g. a particular gene and a particular disease), if these two entities are connected (directly or indirectly), then return the association objects describing the connection.
-     * @param {String} _object E.g. e.g. MP:0013765, can also be a biological entity such as a gene
      * @param {String} subject E.g. e.g. MGI:1342287
+     * @param {String} _object E.g. e.g. MP:0013765, can also be a biological entity such as a gene
      * @param {Object} opts Optional parameters
      * @param {String} opts.objectCategory e.g. disease, phenotype, gene
-     * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
      * @param {String} opts.evidence Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                     
-     * @param {String} opts.subjectCategory e.g. gene, genotype, disease
+     * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
      * @param {Integer} opts.page Page number (default to 1)
-     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
-     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
      * @param {Boolean} opts.graphize If set, includes graph object in response
-     * @param {Integer} opts.rows number of rows (default to 10)
+     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {String} opts.subjectCategory e.g. gene, genotype, disease
+     * @param {Integer} opts.rows number of rows (default to 10)
+     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
      * @param {module:api/AssociationApi~getAssociationsFromCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
-    this.getAssociationsFrom = function(_object, subject, opts, callback) {
+    this.getAssociationsFrom = function(subject, _object, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter '_object' is set
-      if (_object == undefined || _object == null) {
-        throw "Missing the required parameter '_object' when calling getAssociationsFrom";
-      }
 
       // verify the required parameter 'subject' is set
       if (subject == undefined || subject == null) {
         throw "Missing the required parameter 'subject' when calling getAssociationsFrom";
       }
 
+      // verify the required parameter '_object' is set
+      if (_object == undefined || _object == null) {
+        throw "Missing the required parameter '_object' when calling getAssociationsFrom";
+      }
+
 
       var pathParams = {
-        'object': _object,
-        'subject': subject
+        'subject': subject,
+        'object': _object
       };
       var queryParams = {
         'object_category': opts['objectCategory'],
-        'map_identifiers': opts['mapIdentifiers'],
         'evidence': opts['evidence'],
-        'subject_category': opts['subjectCategory'],
+        'map_identifiers': opts['mapIdentifiers'],
         'page': opts['page'],
-        'fl_excludes_evidence': opts['flExcludesEvidence'],
-        'subject_taxon': opts['subjectTaxon'],
         'graphize': opts['graphize'],
+        'subject_taxon': opts['subjectTaxon'],
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'use_compact_associations': opts['useCompactAssociations'],
+        'subject_category': opts['subjectCategory'],
         'rows': opts['rows'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'fl_excludes_evidence': opts['flExcludesEvidence']
       };
       var headerParams = {
       };
@@ -412,15 +414,16 @@
      * @param {String} subject E.g. e.g. NCBIGene:84570
      * @param {Object} opts Optional parameters
      * @param {String} opts.objectCategory e.g. disease, phenotype, gene
-     * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
      * @param {String} opts.evidence Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                     
-     * @param {String} opts.subjectCategory e.g. gene, genotype, disease
+     * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
      * @param {Integer} opts.page Page number (default to 1)
-     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
-     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
      * @param {Boolean} opts.graphize If set, includes graph object in response
-     * @param {Integer} opts.rows number of rows (default to 10)
+     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {String} opts.subjectCategory e.g. gene, genotype, disease
+     * @param {Integer} opts.rows number of rows (default to 10)
+     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
      * @param {module:api/AssociationApi~getAssociationsFrom_0Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -439,15 +442,16 @@
       };
       var queryParams = {
         'object_category': opts['objectCategory'],
-        'map_identifiers': opts['mapIdentifiers'],
         'evidence': opts['evidence'],
-        'subject_category': opts['subjectCategory'],
+        'map_identifiers': opts['mapIdentifiers'],
         'page': opts['page'],
-        'fl_excludes_evidence': opts['flExcludesEvidence'],
-        'subject_taxon': opts['subjectTaxon'],
         'graphize': opts['graphize'],
+        'subject_taxon': opts['subjectTaxon'],
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'use_compact_associations': opts['useCompactAssociations'],
+        'subject_category': opts['subjectCategory'],
         'rows': opts['rows'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'fl_excludes_evidence': opts['flExcludesEvidence']
       };
       var headerParams = {
       };
@@ -479,15 +483,16 @@
      * @param {String} _object E.g. e.g. MP:0013765, can also be a biological entity such as a gene
      * @param {Object} opts Optional parameters
      * @param {String} opts.objectCategory e.g. disease, phenotype, gene
-     * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
      * @param {String} opts.evidence Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                     
-     * @param {String} opts.subjectCategory e.g. gene, genotype, disease
+     * @param {String} opts.mapIdentifiers Prefix to map all IDs to. E.g. NCBIGene
      * @param {Integer} opts.page Page number (default to 1)
-     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
-     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
      * @param {Boolean} opts.graphize If set, includes graph object in response
-     * @param {Integer} opts.rows number of rows (default to 10)
+     * @param {String} opts.subjectTaxon SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {String} opts.subjectCategory e.g. gene, genotype, disease
+     * @param {Integer} opts.rows number of rows (default to 10)
+     * @param {Boolean} opts.flExcludesEvidence If set, excludes evidence objects in response
      * @param {module:api/AssociationApi~getAssociationsToCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -506,15 +511,16 @@
       };
       var queryParams = {
         'object_category': opts['objectCategory'],
-        'map_identifiers': opts['mapIdentifiers'],
         'evidence': opts['evidence'],
-        'subject_category': opts['subjectCategory'],
+        'map_identifiers': opts['mapIdentifiers'],
         'page': opts['page'],
-        'fl_excludes_evidence': opts['flExcludesEvidence'],
-        'subject_taxon': opts['subjectTaxon'],
         'graphize': opts['graphize'],
+        'subject_taxon': opts['subjectTaxon'],
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'use_compact_associations': opts['useCompactAssociations'],
+        'subject_category': opts['subjectCategory'],
         'rows': opts['rows'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'fl_excludes_evidence': opts['flExcludesEvidence']
       };
       var headerParams = {
       };

@@ -65,12 +65,6 @@
       //expect(instance).to.be.a(BioLinkApi.Transcript);
     });
 
-    it('should have the property sequenceFeatures (base name: "sequence_features")', function() {
-      // uncomment below and update the code to test the property sequenceFeatures
-      //var instane = new BioLinkApi.Transcript();
-      //expect(instance).to.be();
-    });
-
     it('should have the property exons (base name: "exons")', function() {
       // uncomment below and update the code to test the property exons
       //var instane = new BioLinkApi.Transcript();
@@ -79,6 +73,12 @@
 
     it('should have the property genes (base name: "genes")', function() {
       // uncomment below and update the code to test the property genes
+      //var instane = new BioLinkApi.Transcript();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sequenceFeatures (base name: "sequence_features")', function() {
+      // uncomment below and update the code to test the property sequenceFeatures
       //var instane = new BioLinkApi.Transcript();
       //expect(instance).to.be();
     });

@@ -74,33 +74,32 @@
       obj = obj || new exports();
 
       BioObject.constructFromObject(data, obj);
-      if (data.hasOwnProperty('sequence_features')) {
-        obj['sequence_features'] = ApiClient.convertToType(data['sequence_features'], [SequenceFeature]);
-      }
       if (data.hasOwnProperty('genes')) {
         obj['genes'] = ApiClient.convertToType(data['genes'], [NamedObject]);
+      }
+      if (data.hasOwnProperty('sequence_features')) {
+        obj['sequence_features'] = ApiClient.convertToType(data['sequence_features'], [SequenceFeature]);
       }
     }
     return obj;
   }
 
   /**
-   * Sequence feature representing this particular instance on a genome
-   * @member {Array.<module:model/SequenceFeature>} sequence_features
-   */
-  exports.prototype['sequence_features'] = undefined;
-  /**
    * References to any gene objects that have this exon in any of their transcripts
    * @member {Array.<module:model/NamedObject>} genes
    */
   exports.prototype['genes'] = undefined;
+  /**
+   * Sequence feature representing this particular instance on a genome
+   * @member {Array.<module:model/SequenceFeature>} sequence_features
+   */
+  exports.prototype['sequence_features'] = undefined;
 
   // Implement BioObject interface:
   /**
-   * RDFS Label
-   * @member {String} label
+   * @member {Array.<String>} categories
    */
-exports.prototype['label'] = undefined;
+exports.prototype['categories'] = undefined;
 
   /**
    * ID or CURIE e.g. MGI:1201606
@@ -109,21 +108,22 @@ exports.prototype['label'] = undefined;
 exports.prototype['id'] = undefined;
 
   /**
-   * @member {Array.<String>} categories
+   * RDFS Label
+   * @member {String} label
    */
-exports.prototype['categories'] = undefined;
-
-  /**
-   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
-   * @member {Array.<String>} xrefs
-   */
-exports.prototype['xrefs'] = undefined;
+exports.prototype['label'] = undefined;
 
   /**
    * Taxon to which the object belongs
    * @member {module:model/Taxon} taxon
    */
 exports.prototype['taxon'] = undefined;
+
+  /**
+   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
+   * @member {Array.<String>} xrefs
+   */
+exports.prototype['xrefs'] = undefined;
 
 
 

@@ -73,32 +73,22 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('per_page')) {
-        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Integer');
-      }
-      if (data.hasOwnProperty('total')) {
-        obj['total'] = ApiClient.convertToType(data['total'], 'Integer');
-      }
       if (data.hasOwnProperty('page')) {
         obj['page'] = ApiClient.convertToType(data['page'], 'Integer');
       }
       if (data.hasOwnProperty('pages')) {
         obj['pages'] = ApiClient.convertToType(data['pages'], 'Integer');
       }
+      if (data.hasOwnProperty('per_page')) {
+        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Integer');
+      }
+      if (data.hasOwnProperty('total')) {
+        obj['total'] = ApiClient.convertToType(data['total'], 'Integer');
+      }
     }
     return obj;
   }
 
-  /**
-   * Number of items per page of results
-   * @member {Integer} per_page
-   */
-  exports.prototype['per_page'] = undefined;
-  /**
-   * Total number of results
-   * @member {Integer} total
-   */
-  exports.prototype['total'] = undefined;
   /**
    * Number of this page of results
    * @member {Integer} page
@@ -109,6 +99,16 @@
    * @member {Integer} pages
    */
   exports.prototype['pages'] = undefined;
+  /**
+   * Number of items per page of results
+   * @member {Integer} per_page
+   */
+  exports.prototype['per_page'] = undefined;
+  /**
+   * Total number of results
+   * @member {Integer} total
+   */
+  exports.prototype['total'] = undefined;
 
 
 

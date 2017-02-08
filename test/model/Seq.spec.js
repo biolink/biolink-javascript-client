@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.Seq);
     });
 
-    it('should have the property md5checksum (base name: "md5checksum")', function() {
-      // uncomment below and update the code to test the property md5checksum
+    it('should have the property alphabet (base name: "alphabet")', function() {
+      // uncomment below and update the code to test the property alphabet
       //var instane = new BioLinkApi.Seq();
       //expect(instance).to.be();
     });
 
-    it('should have the property seqlen (base name: "seqlen")', function() {
-      // uncomment below and update the code to test the property seqlen
+    it('should have the property md5checksum (base name: "md5checksum")', function() {
+      // uncomment below and update the code to test the property md5checksum
       //var instane = new BioLinkApi.Seq();
       //expect(instance).to.be();
     });
@@ -83,8 +83,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property alphabet (base name: "alphabet")', function() {
-      // uncomment below and update the code to test the property alphabet
+    it('should have the property seqlen (base name: "seqlen")', function() {
+      // uncomment below and update the code to test the property seqlen
       //var instane = new BioLinkApi.Seq();
       //expect(instance).to.be();
     });

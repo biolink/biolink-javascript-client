@@ -73,22 +73,32 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('facet_counts')) {
+        obj['facet_counts'] = ApiClient.convertToType(data['facet_counts'], Object);
+      }
+      if (data.hasOwnProperty('facet_pivot')) {
+        obj['facet_pivot'] = ApiClient.convertToType(data['facet_pivot'], Object);
+      }
       if (data.hasOwnProperty('numFound')) {
         obj['numFound'] = ApiClient.convertToType(data['numFound'], 'Integer');
       }
       if (data.hasOwnProperty('start')) {
         obj['start'] = ApiClient.convertToType(data['start'], 'Integer');
       }
-      if (data.hasOwnProperty('facet_pivot')) {
-        obj['facet_pivot'] = ApiClient.convertToType(data['facet_pivot'], Object);
-      }
-      if (data.hasOwnProperty('facet_counts')) {
-        obj['facet_counts'] = ApiClient.convertToType(data['facet_counts'], Object);
-      }
     }
     return obj;
   }
 
+  /**
+   * Mapping between field names and association counts
+   * @member {Object} facet_counts
+   */
+  exports.prototype['facet_counts'] = undefined;
+  /**
+   * Populated in facet_pivots is passed
+   * @member {Object} facet_pivot
+   */
+  exports.prototype['facet_pivot'] = undefined;
   /**
    * total number of associations matching query
    * @member {Integer} numFound
@@ -99,16 +109,6 @@
    * @member {Integer} start
    */
   exports.prototype['start'] = undefined;
-  /**
-   * Populated in facet_pivots is passed
-   * @member {Object} facet_pivot
-   */
-  exports.prototype['facet_pivot'] = undefined;
-  /**
-   * Mapping between field names and association counts
-   * @member {Object} facet_counts
-   */
-  exports.prototype['facet_counts'] = undefined;
 
 
 

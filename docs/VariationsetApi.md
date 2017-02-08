@@ -153,7 +153,7 @@ No authorization required
 
 <a name="getVariantSetsArchiveCollection"></a>
 # **getVariantSetsArchiveCollection**
-> PageOfVariantSets getVariantSetsArchiveCollection(day, year, month, opts)
+> PageOfVariantSets getVariantSetsArchiveCollection(year, month, day, opts)
 
 Returns list of variant sets from a specified time period
 
@@ -163,15 +163,15 @@ var BioLinkApi = require('bio_link_api');
 
 var apiInstance = new BioLinkApi.VariationsetApi();
 
-var day = 56; // Integer | 
-
 var year = 56; // Integer | 
 
 var month = 56; // Integer | 
 
+var day = 56; // Integer | 
+
 var opts = { 
-  'perPage': 10, // Integer | Results per page {error_msg}
-  'page': 1 // Integer | Page number
+  'page': 1, // Integer | Page number
+  'perPage': 10 // Integer | Results per page {error_msg}
 };
 
 var callback = function(error, data, response) {
@@ -181,18 +181,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getVariantSetsArchiveCollection(day, year, month, opts, callback);
+apiInstance.getVariantSetsArchiveCollection(year, month, day, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **day** | **Integer**|  | 
  **year** | **Integer**|  | 
  **month** | **Integer**|  | 
- **perPage** | **Integer**| Results per page {error_msg} | [optional] [default to 10]
+ **day** | **Integer**|  | 
  **page** | **Integer**| Page number | [optional] [default to 1]
+ **perPage** | **Integer**| Results per page {error_msg} | [optional] [default to 10]
 
 ### Return type
 
@@ -220,8 +220,8 @@ var BioLinkApi = require('bio_link_api');
 var apiInstance = new BioLinkApi.VariationsetApi();
 
 var opts = { 
-  'perPage': 10, // Integer | Results per page {error_msg}
-  'page': 1 // Integer | Page number
+  'page': 1, // Integer | Page number
+  'perPage': 10 // Integer | Results per page {error_msg}
 };
 
 var callback = function(error, data, response) {
@@ -238,8 +238,8 @@ apiInstance.getVariantSetsCollection(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **perPage** | **Integer**| Results per page {error_msg} | [optional] [default to 10]
  **page** | **Integer**| Page number | [optional] [default to 1]
+ **perPage** | **Integer**| Results per page {error_msg} | [optional] [default to 10]
 
 ### Return type
 

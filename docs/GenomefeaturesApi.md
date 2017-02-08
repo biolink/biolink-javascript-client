@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getFeaturesWithinResource"></a>
 # **getFeaturesWithinResource**
-> [SequenceFeature] getFeaturesWithinResource(begin, build, reference, end)
+> [SequenceFeature] getFeaturesWithinResource(begin, end, build, reference)
 
 Returns list of matches
 
@@ -21,11 +21,11 @@ var apiInstance = new BioLinkApi.GenomefeaturesApi();
 
 var begin = "begin_example"; // String | 
 
+var end = "end_example"; // String | 
+
 var build = "build_example"; // String | 
 
 var reference = "reference_example"; // String | 
-
-var end = "end_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -35,7 +35,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getFeaturesWithinResource(begin, build, reference, end, callback);
+apiInstance.getFeaturesWithinResource(begin, end, build, reference, callback);
 ```
 
 ### Parameters
@@ -43,9 +43,9 @@ apiInstance.getFeaturesWithinResource(begin, build, reference, end, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **begin** | **String**|  | 
+ **end** | **String**|  | 
  **build** | **String**|  | 
  **reference** | **String**|  | 
- **end** | **String**|  | 
 
 ### Return type
 

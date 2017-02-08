@@ -83,11 +83,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -105,11 +106,12 @@ apiInstance.getAlleleObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -141,11 +143,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -163,11 +166,12 @@ apiInstance.getAnatomyGeneAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -199,11 +203,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -221,11 +226,12 @@ apiInstance.getAnatomyObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -255,11 +261,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -277,11 +284,12 @@ apiInstance.getAnatomyPhenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -313,11 +321,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -335,11 +344,12 @@ apiInstance.getDiseaseAnatomyAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -371,11 +381,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -393,11 +404,12 @@ apiInstance.getDiseaseFunctionAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -427,11 +439,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -449,11 +462,12 @@ apiInstance.getDiseaseGeneAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -485,11 +499,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -507,11 +522,12 @@ apiInstance.getDiseaseModelAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -543,11 +559,12 @@ var taxon = "taxon_example"; // String | CURIE of organism taxonomy class to con
 var id = "id_example"; // String | CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -566,11 +583,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taxon** | **String**| CURIE of organism taxonomy class to constrain models, e.g NCBITaxon:6239 (C elegans).   Higher level taxa may be used | 
  **id** | **String**| CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -600,11 +618,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -622,11 +641,12 @@ apiInstance.getDiseaseObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -656,11 +676,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -678,11 +699,12 @@ apiInstance.getDiseasePhenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -714,11 +736,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of disease, e.g. DOID:2841 (asthma). Equivalent IDs not yet supported
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -736,11 +759,12 @@ apiInstance.getDiseaseSubstanceAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of disease, e.g. DOID:2841 (asthma). Equivalent IDs not yet supported | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -772,11 +796,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -794,11 +819,12 @@ apiInstance.getDiseaseSubstanceAssociations_0(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -830,11 +856,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -852,11 +879,12 @@ apiInstance.getEnvironmentObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -886,11 +914,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -908,11 +937,12 @@ apiInstance.getEnvironmentPhenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -942,11 +972,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -964,11 +995,12 @@ apiInstance.getGeneExpressionAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1000,13 +1032,14 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
-  'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'type': "type_example", // String | P, O or LDO (paralog, ortholog or least-diverged).
-  'homologTaxon': "homologTaxon_example", // String | Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default
+  'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'homologTaxon': "homologTaxon_example", // String | Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1024,13 +1057,14 @@ apiInstance.getGeneFunctionAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
- **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **type** | **String**| P, O or LDO (paralog, ortholog or least-diverged). | [optional] 
- **homologTaxon** | **String**| Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default | [optional] 
+ **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **homologTaxon** | **String**| Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default | [optional] 
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1060,13 +1094,14 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
-  'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'type': "type_example", // String | P, O or LDO (paralog, ortholog or least-diverged).
-  'homologTaxon': "homologTaxon_example", // String | Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default
+  'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'homologTaxon': "homologTaxon_example", // String | Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20, // Integer | number of rows
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
 };
 
 var callback = function(error, data, response) {
@@ -1084,13 +1119,14 @@ apiInstance.getGeneHomologAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
- **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **type** | **String**| P, O or LDO (paralog, ortholog or least-diverged). | [optional] 
- **homologTaxon** | **String**| Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default | [optional] 
+ **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **homologTaxon** | **String**| Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default | [optional] 
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
 
 ### Return type
 
@@ -1120,11 +1156,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1142,11 +1179,12 @@ apiInstance.getGeneInteractions(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1176,11 +1214,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | id, e.g. NCBIGene:84570
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1198,11 +1237,12 @@ apiInstance.getGeneObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id, e.g. NCBIGene:84570 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1232,11 +1272,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1254,11 +1295,12 @@ apiInstance.getGenePhenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1288,11 +1330,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1310,11 +1353,12 @@ apiInstance.getGenePublicationList(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1344,11 +1388,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1366,11 +1411,12 @@ apiInstance.getGeneproductObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1400,11 +1446,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1422,11 +1469,12 @@ apiInstance.getGenericAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1456,11 +1504,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | id, e.g. NCBIGene:84570
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1478,11 +1527,12 @@ apiInstance.getGenericObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id, e.g. NCBIGene:84570 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1512,11 +1562,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-4286 (if non-human will return models)
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1534,11 +1585,12 @@ apiInstance.getGenotypeDiseaseAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-4286 (if non-human will return models) | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1568,11 +1620,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1590,11 +1643,12 @@ apiInstance.getGenotypeGeneAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1626,11 +1680,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1648,11 +1703,12 @@ apiInstance.getGenotypeGenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1684,11 +1740,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1706,11 +1763,12 @@ apiInstance.getGenotypeObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1740,11 +1798,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-4286
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1762,11 +1821,12 @@ apiInstance.getGenotypePhenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-4286 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1796,11 +1856,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1818,11 +1879,12 @@ apiInstance.getGotermGeneAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1852,11 +1914,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | GO class CURIE identifier, e.g GO:0016301 (kinase activity)
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1874,11 +1937,12 @@ apiInstance.getGotermObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| GO class CURIE identifier, e.g GO:0016301 (kinase activity) | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1908,11 +1972,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1930,11 +1995,12 @@ apiInstance.getGotermPhenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -1964,11 +2030,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -1986,11 +2053,12 @@ apiInstance.getLiteratureDiseaseAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2020,11 +2088,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2042,11 +2111,12 @@ apiInstance.getLiteratureGeneAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2076,11 +2146,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2098,11 +2169,12 @@ apiInstance.getLiteratureGenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2134,11 +2206,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2156,11 +2229,12 @@ apiInstance.getParentObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2192,11 +2266,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2214,11 +2289,12 @@ apiInstance.getParentObject_0(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2248,11 +2324,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2270,11 +2347,12 @@ apiInstance.getPathwayGeneAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2304,11 +2382,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE any pathway element. May be a GO ID or a pathway database ID
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2326,11 +2405,12 @@ apiInstance.getPathwayObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE any pathway element. May be a GO ID or a pathway database ID | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2360,11 +2440,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2382,11 +2463,12 @@ apiInstance.getPathwayParticipantAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2418,11 +2500,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2440,11 +2523,12 @@ apiInstance.getPhenotypeAnatomyAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2476,11 +2560,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2498,11 +2583,12 @@ apiInstance.getPhenotypeFunctionAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2519,7 +2605,7 @@ No authorization required
 
 <a name="getPhenotypeGeneAssociations"></a>
 # **getPhenotypeGeneAssociations**
-> getPhenotypeGeneAssociations(taxid, id, opts)
+> getPhenotypeGeneAssociations(id, taxid, opts)
 
 Returns gene ids for all genes for a particular phenotype in a taxon
 
@@ -2531,16 +2617,17 @@ var BioLinkApi = require('bio_link_api');
 
 var apiInstance = new BioLinkApi.BioentityApi();
 
-var taxid = "taxid_example"; // String | Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus)
-
 var id = "id_example"; // String | Pheno class CURIE identifier, e.g  MP:0001569 (abnormal circulating bilirubin level)
 
+var taxid = "taxid_example"; // String | Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus)
+
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2550,20 +2637,21 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.getPhenotypeGeneAssociations(taxid, id, opts, callback);
+apiInstance.getPhenotypeGeneAssociations(id, taxid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxid** | **String**| Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus) | 
  **id** | **String**| Pheno class CURIE identifier, e.g  MP:0001569 (abnormal circulating bilirubin level) | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
+ **taxid** | **String**| Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus) | 
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2593,11 +2681,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2615,11 +2704,12 @@ apiInstance.getPhenotypeGeneAssociations_0(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2649,11 +2739,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2671,11 +2762,12 @@ apiInstance.getPhenotypeObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2707,11 +2799,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2729,11 +2822,12 @@ apiInstance.getPhenotypePhenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2763,11 +2857,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2785,11 +2880,12 @@ apiInstance.getPubObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2819,11 +2915,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2841,11 +2938,12 @@ apiInstance.getSequenceFeatureObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2877,11 +2975,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2899,11 +2998,12 @@ apiInstance.getSubstanceExposures(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2935,11 +3035,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -2957,11 +3058,12 @@ apiInstance.getSubstanceInteractions(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -2991,11 +3093,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3013,11 +3116,12 @@ apiInstance.getSubstanceObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -3049,11 +3153,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3071,11 +3176,12 @@ apiInstance.getSubstanceParticipantInAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -3107,11 +3213,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3129,11 +3236,12 @@ apiInstance.getSubstanceRelationships(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -3165,11 +3273,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3187,11 +3296,12 @@ apiInstance.getSubstanceRoleAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -3221,11 +3331,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3243,11 +3354,12 @@ apiInstance.getSubstanceTargetAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -3277,11 +3389,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3299,11 +3412,12 @@ apiInstance.getVariantGeneAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -3333,11 +3447,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3355,11 +3470,12 @@ apiInstance.getVariantGenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -3389,11 +3505,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3411,11 +3528,12 @@ apiInstance.getVariantObject(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 
@@ -3445,11 +3563,12 @@ var apiInstance = new BioLinkApi.BioentityApi();
 var id = "id_example"; // String | CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
 
 var opts = { 
-  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
-  'rows': 20, // Integer | number of rows
   'excludeAutomaticAssertions': true, // Boolean | If set, excludes associations that involve IEAs (ECO:0000501)
   'unselectEvidence': true, // Boolean | If set, excludes evidence objects in response
-  'useCompactAssociations': true // Boolean | If true, returns results in compact associations format
+  'slim': ["slim_example"], // [String] | Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+  'fetchObjects': true, // Boolean | If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+  'useCompactAssociations': true, // Boolean | If true, returns results in compact associations format
+  'rows': 20 // Integer | number of rows
 };
 
 var callback = function(error, data, response) {
@@ -3467,11 +3586,12 @@ apiInstance.getVariantPhenotypeAssociations(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783 | 
- **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
- **rows** | **Integer**| number of rows | [optional] [default to 20]
  **excludeAutomaticAssertions** | **Boolean**| If set, excludes associations that involve IEAs (ECO:0000501) | [optional] 
  **unselectEvidence** | **Boolean**| If set, excludes evidence objects in response | [optional] 
+ **slim** | [**[String]**](String.md)| Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID | [optional] 
+ **fetchObjects** | **Boolean**| If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload | [optional] [default to true]
  **useCompactAssociations** | **Boolean**| If true, returns results in compact associations format | [optional] 
+ **rows** | **Integer**| number of rows | [optional] [default to 20]
 
 ### Return type
 

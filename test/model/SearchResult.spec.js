@@ -65,14 +65,8 @@
       //expect(instance).to.be.a(BioLinkApi.SearchResult);
     });
 
-    it('should have the property numFound (base name: "numFound")', function() {
-      // uncomment below and update the code to test the property numFound
-      //var instane = new BioLinkApi.SearchResult();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property start (base name: "start")', function() {
-      // uncomment below and update the code to test the property start
+    it('should have the property facetCounts (base name: "facet_counts")', function() {
+      // uncomment below and update the code to test the property facetCounts
       //var instane = new BioLinkApi.SearchResult();
       //expect(instance).to.be();
     });
@@ -83,8 +77,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property facetCounts (base name: "facet_counts")', function() {
-      // uncomment below and update the code to test the property facetCounts
+    it('should have the property numFound (base name: "numFound")', function() {
+      // uncomment below and update the code to test the property numFound
+      //var instane = new BioLinkApi.SearchResult();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property start (base name: "start")', function() {
+      // uncomment below and update the code to test the property start
       //var instane = new BioLinkApi.SearchResult();
       //expect(instance).to.be();
     });

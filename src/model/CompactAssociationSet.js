@@ -75,11 +75,11 @@
       if (data.hasOwnProperty('objects')) {
         obj['objects'] = ApiClient.convertToType(data['objects'], ['String']);
       }
-      if (data.hasOwnProperty('subject')) {
-        obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
-      }
       if (data.hasOwnProperty('relation')) {
         obj['relation'] = ApiClient.convertToType(data['relation'], 'String');
+      }
+      if (data.hasOwnProperty('subject')) {
+        obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
       }
     }
     return obj;
@@ -91,15 +91,15 @@
    */
   exports.prototype['objects'] = undefined;
   /**
-   * Subject of association (what it is about), e.g. MGI:1201606
-   * @member {String} subject
-   */
-  exports.prototype['subject'] = undefined;
-  /**
    * Relationship type connecting subject and object list
    * @member {String} relation
    */
   exports.prototype['relation'] = undefined;
+  /**
+   * Subject of association (what it is about), e.g. MGI:1201606
+   * @member {String} subject
+   */
+  exports.prototype['subject'] = undefined;
 
 
 

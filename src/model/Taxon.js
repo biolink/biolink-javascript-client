@@ -71,26 +71,26 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('label')) {
-        obj['label'] = ApiClient.convertToType(data['label'], 'String');
-      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
+      if (data.hasOwnProperty('label')) {
+        obj['label'] = ApiClient.convertToType(data['label'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * RDFS Label
-   * @member {String} label
-   */
-  exports.prototype['label'] = undefined;
-  /**
    * CURIE ID, e.g. NCBITaxon:9606
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
+  /**
+   * RDFS Label
+   * @member {String} label
+   */
+  exports.prototype['label'] = undefined;
 
 
 

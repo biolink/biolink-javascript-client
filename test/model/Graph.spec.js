@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.Graph);
     });
 
-    it('should have the property nodes (base name: "nodes")', function() {
-      // uncomment below and update the code to test the property nodes
+    it('should have the property edges (base name: "edges")', function() {
+      // uncomment below and update the code to test the property edges
       //var instane = new BioLinkApi.Graph();
       //expect(instance).to.be();
     });
 
-    it('should have the property edges (base name: "edges")', function() {
-      // uncomment below and update the code to test the property edges
+    it('should have the property nodes (base name: "nodes")', function() {
+      // uncomment below and update the code to test the property nodes
       //var instane = new BioLinkApi.Graph();
       //expect(instance).to.be();
     });

@@ -67,18 +67,23 @@
     /**
      * Returns list of matches
      * @param {String} begin 
+     * @param {String} end 
      * @param {String} build 
      * @param {String} reference 
-     * @param {String} end 
      * @param {module:api/GenomefeaturesApi~getFeaturesWithinResourceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/SequenceFeature>}
      */
-    this.getFeaturesWithinResource = function(begin, build, reference, end, callback) {
+    this.getFeaturesWithinResource = function(begin, end, build, reference, callback) {
       var postBody = null;
 
       // verify the required parameter 'begin' is set
       if (begin == undefined || begin == null) {
         throw "Missing the required parameter 'begin' when calling getFeaturesWithinResource";
+      }
+
+      // verify the required parameter 'end' is set
+      if (end == undefined || end == null) {
+        throw "Missing the required parameter 'end' when calling getFeaturesWithinResource";
       }
 
       // verify the required parameter 'build' is set
@@ -91,17 +96,12 @@
         throw "Missing the required parameter 'reference' when calling getFeaturesWithinResource";
       }
 
-      // verify the required parameter 'end' is set
-      if (end == undefined || end == null) {
-        throw "Missing the required parameter 'end' when calling getFeaturesWithinResource";
-      }
-
 
       var pathParams = {
         'begin': begin,
+        'end': end,
         'build': build,
-        'reference': reference,
-        'end': end
+        'reference': reference
       };
       var queryParams = {
       };

@@ -59,11 +59,11 @@
     var _this = this;
 
     _this['body'] = body;
+
+
+
+
     _this['title'] = title;
-
-
-
-
   };
 
   /**
@@ -80,8 +80,8 @@
       if (data.hasOwnProperty('body')) {
         obj['body'] = ApiClient.convertToType(data['body'], 'String');
       }
-      if (data.hasOwnProperty('title')) {
-        obj['title'] = ApiClient.convertToType(data['title'], 'String');
+      if (data.hasOwnProperty('category')) {
+        obj['category'] = ApiClient.convertToType(data['category'], 'String');
       }
       if (data.hasOwnProperty('category_id')) {
         obj['category_id'] = ApiClient.convertToType(data['category_id'], 'Integer');
@@ -92,8 +92,8 @@
       if (data.hasOwnProperty('pub_date')) {
         obj['pub_date'] = ApiClient.convertToType(data['pub_date'], 'Date');
       }
-      if (data.hasOwnProperty('category')) {
-        obj['category'] = ApiClient.convertToType(data['category'], 'String');
+      if (data.hasOwnProperty('title')) {
+        obj['title'] = ApiClient.convertToType(data['title'], 'String');
       }
     }
     return obj;
@@ -105,10 +105,9 @@
    */
   exports.prototype['body'] = undefined;
   /**
-   * Article title
-   * @member {String} title
+   * @member {String} category
    */
-  exports.prototype['title'] = undefined;
+  exports.prototype['category'] = undefined;
   /**
    * @member {Integer} category_id
    */
@@ -123,9 +122,10 @@
    */
   exports.prototype['pub_date'] = undefined;
   /**
-   * @member {String} category
+   * Article title
+   * @member {String} title
    */
-  exports.prototype['category'] = undefined;
+  exports.prototype['title'] = undefined;
 
 
 

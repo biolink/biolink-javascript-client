@@ -65,80 +65,8 @@
       //expect(instance).to.be.a(BioLinkApi.Gene);
     });
 
-    it('should have the property pathwayAssociations (base name: "pathway_associations")', function() {
-      // uncomment below and update the code to test the property pathwayAssociations
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property genotypeAssociations (base name: "genotype_associations")', function() {
-      // uncomment below and update the code to test the property genotypeAssociations
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property fullName (base name: "full_name")', function() {
-      // uncomment below and update the code to test the property fullName
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property sequenceFeatures (base name: "sequence_features")', function() {
-      // uncomment below and update the code to test the property sequenceFeatures
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property functionAssociations (base name: "function_associations")', function() {
-      // uncomment below and update the code to test the property functionAssociations
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property interactionAssociations (base name: "interaction_associations")', function() {
-      // uncomment below and update the code to test the property interactionAssociations
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property transcripts (base name: "transcripts")', function() {
-      // uncomment below and update the code to test the property transcripts
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property literatureAssociations (base name: "literature_associations")', function() {
-      // uncomment below and update the code to test the property literatureAssociations
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property summaries (base name: "summaries")', function() {
-      // uncomment below and update the code to test the property summaries
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
     it('should have the property chromosome (base name: "chromosome")', function() {
       // uncomment below and update the code to test the property chromosome
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property diseaseAssociations (base name: "disease_associations")', function() {
-      // uncomment below and update the code to test the property diseaseAssociations
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property phenotypeAssociations (base name: "phenotype_associations")', function() {
-      // uncomment below and update the code to test the property phenotypeAssociations
-      //var instane = new BioLinkApi.Gene();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property homologyAssociations (base name: "homology_associations")', function() {
-      // uncomment below and update the code to test the property homologyAssociations
       //var instane = new BioLinkApi.Gene();
       //expect(instance).to.be();
     });
@@ -149,14 +77,86 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property systematicName (base name: "systematic_name")', function() {
-      // uncomment below and update the code to test the property systematicName
+    it('should have the property diseaseAssociations (base name: "disease_associations")', function() {
+      // uncomment below and update the code to test the property diseaseAssociations
       //var instane = new BioLinkApi.Gene();
       //expect(instance).to.be();
     });
 
     it('should have the property families (base name: "families")', function() {
       // uncomment below and update the code to test the property families
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fullName (base name: "full_name")', function() {
+      // uncomment below and update the code to test the property fullName
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property functionAssociations (base name: "function_associations")', function() {
+      // uncomment below and update the code to test the property functionAssociations
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property genotypeAssociations (base name: "genotype_associations")', function() {
+      // uncomment below and update the code to test the property genotypeAssociations
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property homologyAssociations (base name: "homology_associations")', function() {
+      // uncomment below and update the code to test the property homologyAssociations
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property interactionAssociations (base name: "interaction_associations")', function() {
+      // uncomment below and update the code to test the property interactionAssociations
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property literatureAssociations (base name: "literature_associations")', function() {
+      // uncomment below and update the code to test the property literatureAssociations
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pathwayAssociations (base name: "pathway_associations")', function() {
+      // uncomment below and update the code to test the property pathwayAssociations
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property phenotypeAssociations (base name: "phenotype_associations")', function() {
+      // uncomment below and update the code to test the property phenotypeAssociations
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sequenceFeatures (base name: "sequence_features")', function() {
+      // uncomment below and update the code to test the property sequenceFeatures
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property summaries (base name: "summaries")', function() {
+      // uncomment below and update the code to test the property summaries
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property systematicName (base name: "systematic_name")', function() {
+      // uncomment below and update the code to test the property systematicName
+      //var instane = new BioLinkApi.Gene();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property transcripts (base name: "transcripts")', function() {
+      // uncomment below and update the code to test the property transcripts
       //var instane = new BioLinkApi.Gene();
       //expect(instance).to.be();
     });

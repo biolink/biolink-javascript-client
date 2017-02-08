@@ -71,8 +71,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
+    it('should have the property category (base name: "category")', function() {
+      // uncomment below and update the code to test the property category
       //var instane = new BioLinkApi.VariantSet();
       //expect(instance).to.be();
     });
@@ -95,8 +95,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property category (base name: "category")', function() {
-      // uncomment below and update the code to test the property category
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
       //var instane = new BioLinkApi.VariantSet();
       //expect(instance).to.be();
     });

@@ -68,6 +68,7 @@
 
 
 
+
   };
 
   /**
@@ -81,17 +82,20 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('evidence_types')) {
-        obj['evidence_types'] = ApiClient.convertToType(data['evidence_types'], [NamedObject]);
-      }
       if (data.hasOwnProperty('evidence_graph')) {
         obj['evidence_graph'] = Graph.constructFromObject(data['evidence_graph']);
+      }
+      if (data.hasOwnProperty('evidence_types')) {
+        obj['evidence_types'] = ApiClient.convertToType(data['evidence_types'], [NamedObject]);
       }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
-      if (data.hasOwnProperty('relation')) {
-        obj['relation'] = Relation.constructFromObject(data['relation']);
+      if (data.hasOwnProperty('object')) {
+        obj['object'] = BioObject.constructFromObject(data['object']);
+      }
+      if (data.hasOwnProperty('object_extension')) {
+        obj['object_extension'] = ApiClient.convertToType(data['object_extension'], [AnnotationExtension]);
       }
       if (data.hasOwnProperty('provided_by')) {
         obj['provided_by'] = ApiClient.convertToType(data['provided_by'], ['String']);
@@ -99,48 +103,52 @@
       if (data.hasOwnProperty('publications')) {
         obj['publications'] = ApiClient.convertToType(data['publications'], [Publication]);
       }
-      if (data.hasOwnProperty('object_extension')) {
-        obj['object_extension'] = ApiClient.convertToType(data['object_extension'], [AnnotationExtension]);
-      }
       if (data.hasOwnProperty('qualifiers')) {
         obj['qualifiers'] = ApiClient.convertToType(data['qualifiers'], [AssociationPropertyValue]);
       }
-      if (data.hasOwnProperty('object')) {
-        obj['object'] = BioObject.constructFromObject(data['object']);
+      if (data.hasOwnProperty('relation')) {
+        obj['relation'] = Relation.constructFromObject(data['relation']);
+      }
+      if (data.hasOwnProperty('slim')) {
+        obj['slim'] = ApiClient.convertToType(data['slim'], ['String']);
       }
       if (data.hasOwnProperty('subject')) {
         obj['subject'] = BioObject.constructFromObject(data['subject']);
       }
-      if (data.hasOwnProperty('type')) {
-        obj['type'] = ApiClient.convertToType(data['type'], 'String');
-      }
       if (data.hasOwnProperty('subject_extension')) {
         obj['subject_extension'] = ApiClient.convertToType(data['subject_extension'], [AnnotationExtension]);
+      }
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Evidence types (ECO classes) extracted from evidence graph
-   * @member {Array.<module:model/NamedObject>} evidence_types
-   */
-  exports.prototype['evidence_types'] = undefined;
-  /**
    * An indirect association is a join between two or more direct assocations, e.g. gene to disease via ortholog. We record the full set of associations as a graph object
    * @member {module:model/Graph} evidence_graph
    */
   exports.prototype['evidence_graph'] = undefined;
+  /**
+   * Evidence types (ECO classes) extracted from evidence graph
+   * @member {Array.<module:model/NamedObject>} evidence_types
+   */
+  exports.prototype['evidence_types'] = undefined;
   /**
    * Association/annotation unique ID
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
   /**
-   * Relationship type connecting subject and object
-   * @member {module:model/Relation} relation
+   * Object (sensu RDF), aka target, e.g. HP:0000448, MP:0002109, DOID:14330
+   * @member {module:model/BioObject} object
    */
-  exports.prototype['relation'] = undefined;
+  exports.prototype['object'] = undefined;
+  /**
+   * @member {Array.<module:model/AnnotationExtension>} object_extension
+   */
+  exports.prototype['object_extension'] = undefined;
   /**
    * Provider of association, e.g. Orphanet, ClinVar
    * @member {Array.<String>} provided_by
@@ -152,32 +160,33 @@
    */
   exports.prototype['publications'] = undefined;
   /**
-   * @member {Array.<module:model/AnnotationExtension>} object_extension
-   */
-  exports.prototype['object_extension'] = undefined;
-  /**
    * @member {Array.<module:model/AssociationPropertyValue>} qualifiers
    */
   exports.prototype['qualifiers'] = undefined;
   /**
-   * Object (sensu RDF), aka target, e.g. HP:0000448, MP:0002109, DOID:14330
-   * @member {module:model/BioObject} object
+   * Relationship type connecting subject and object
+   * @member {module:model/Relation} relation
    */
-  exports.prototype['object'] = undefined;
+  exports.prototype['relation'] = undefined;
+  /**
+   * Objects mapped to a slim
+   * @member {Array.<String>} slim
+   */
+  exports.prototype['slim'] = undefined;
   /**
    * Subject of association (what it is about), e.g. ClinVar:nnn, MGI:1201606
    * @member {module:model/BioObject} subject
    */
   exports.prototype['subject'] = undefined;
   /**
+   * @member {Array.<module:model/AnnotationExtension>} subject_extension
+   */
+  exports.prototype['subject_extension'] = undefined;
+  /**
    * Type of association, e.g. gene-phenotype
    * @member {String} type
    */
   exports.prototype['type'] = undefined;
-  /**
-   * @member {Array.<module:model/AnnotationExtension>} subject_extension
-   */
-  exports.prototype['subject_extension'] = undefined;
 
 
 

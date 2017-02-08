@@ -88,10 +88,9 @@
 
   // Implement Genotype interface:
   /**
-   * RDFS Label
-   * @member {String} label
+   * @member {Array.<String>} categories
    */
-exports.prototype['label'] = undefined;
+exports.prototype['categories'] = undefined;
 
   /**
    * ID or CURIE e.g. MGI:1201606
@@ -100,15 +99,10 @@ exports.prototype['label'] = undefined;
 exports.prototype['id'] = undefined;
 
   /**
-   * @member {Array.<String>} categories
+   * RDFS Label
+   * @member {String} label
    */
-exports.prototype['categories'] = undefined;
-
-  /**
-   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
-   * @member {Array.<String>} xrefs
-   */
-exports.prototype['xrefs'] = undefined;
+exports.prototype['label'] = undefined;
 
   /**
    * Taxon to which the object belongs
@@ -117,9 +111,15 @@ exports.prototype['xrefs'] = undefined;
 exports.prototype['taxon'] = undefined;
 
   /**
-   * @member {Array.<module:model/Association>} variant_associations
+   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
+   * @member {Array.<String>} xrefs
    */
-exports.prototype['variant_associations'] = undefined;
+exports.prototype['xrefs'] = undefined;
+
+  /**
+   * @member {Array.<module:model/Association>} disease_associations
+   */
+exports.prototype['disease_associations'] = undefined;
 
   /**
    * @member {Array.<module:model/Association>} gene_associations
@@ -132,9 +132,9 @@ exports.prototype['gene_associations'] = undefined;
 exports.prototype['phenotype_associations'] = undefined;
 
   /**
-   * @member {Array.<module:model/Association>} disease_associations
+   * @member {Array.<module:model/Association>} variant_associations
    */
-exports.prototype['disease_associations'] = undefined;
+exports.prototype['variant_associations'] = undefined;
 
 
 

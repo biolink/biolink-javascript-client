@@ -69,11 +69,12 @@
      * This is a composition of multiple smaller operations, including fetching allele metadata, plus allele associations  TODO - should allele be subsumed into variant?
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getAlleleObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Allele>}
      */
@@ -91,11 +92,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -127,11 +129,12 @@
      * Typically encompasses genes expressed in a particular location.
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getAnatomyGeneAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -149,11 +152,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -185,11 +189,12 @@
      * Anatomical entities span ranges from the subcellular (e.g. nucleus) through cells to tissues, organs and organ systems.
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getAnatomyObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getAnatomyObject = function(id, opts, callback) {
@@ -206,11 +211,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -241,11 +247,12 @@
      * TODO Returns associations between anatomical entity and phenotypes
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getAnatomyPhenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -263,11 +270,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -299,11 +307,12 @@
      * For example, neurodegeneratibe disease located in nervous system. For cancer, this may include both site of original and end location.
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseaseAnatomyAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -321,11 +330,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -357,11 +367,12 @@
      * This may come from a combination of asserted knowledge (e.g. Fanconi Anemia affects DNA repair) or from data-driven approach (cf Translator)  Results are typically represented as GO classes
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseaseFunctionAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -379,11 +390,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -414,11 +426,12 @@
      * Returns genes associated with a disease
      * @param {String} id CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseaseGeneAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -436,11 +449,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -472,11 +486,12 @@
      * In the association object returned, the subject will be the disease, and the object will be the model. The model may be a gene or genetic element.  If the query disease is a general class, the association subject may be to a specific disease.  In some cases the association will be *direct*, for example if a paper asserts a genotype is a model of a disease.  In other cases, the association will be *indirect*, for example, chaining over orthology. In these cases the chain will be reflected in the *evidence graph*  * TODO: provide hook into owlsim for dynamic computation of models by similarity
      * @param {String} id CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseaseModelAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -494,11 +509,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -530,11 +546,12 @@
      * @param {String} taxon CURIE of organism taxonomy class to constrain models, e.g NCBITaxon:6239 (C elegans).   Higher level taxa may be used
      * @param {String} id CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseaseModelTaxonAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -558,11 +575,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -593,11 +611,12 @@
      * TODO Returns disease object
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseaseObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getDiseaseObject = function(id, opts, callback) {
@@ -614,11 +633,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -649,11 +669,12 @@
      * Returns phenotypes associated with disease
      * @param {String} id CURIE identifier of disease, e.g. OMIM:605543, DOID:678. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseasePhenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -671,11 +692,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -707,11 +729,12 @@
      * e.g. drugs or small molecules used to treat
      * @param {String} id CURIE identifier of disease, e.g. DOID:2841 (asthma). Equivalent IDs not yet supported
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseaseSubstanceAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getDiseaseSubstanceAssociations = function(id, opts, callback) {
@@ -728,11 +751,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -764,11 +788,12 @@
      * e.g. drugs or small molecules used to treat
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getDiseaseSubstanceAssociations_0Callback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getDiseaseSubstanceAssociations_0 = function(id, opts, callback) {
@@ -785,11 +810,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -821,11 +847,12 @@
      * TODO consider renaming exposure
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getEnvironmentObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getEnvironmentObject = function(id, opts, callback) {
@@ -842,11 +869,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -877,11 +905,12 @@
      * TODO Returns list of associations
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getEnvironmentPhenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -899,11 +928,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -934,11 +964,12 @@
      * TODO Returns expression events for a gene
      * @param {String} id CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGeneExpressionAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -956,11 +987,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -992,13 +1024,14 @@
      * Note: currently this is implemented as a query to the GO solr instance. A smaller set of identifiers may be supported:   - ZFIN e.g. ZFIN:ZDB-GENE-050417-357  - MGI e.g. MGI:1342287  - Use UniProt for human (TODO: map this)
      * @param {String} id id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
-     * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {module:model/String} opts.type P, O or LDO (paralog, ortholog or least-diverged).
-     * @param {String} opts.homologTaxon Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default
+     * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {String} opts.homologTaxon Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGeneFunctionAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1016,13 +1049,14 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
-        'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'type': opts['type'],
-        'homolog_taxon': opts['homologTaxon'],
+        'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'homolog_taxon': opts['homologTaxon'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'fetch_objects': opts['fetchObjects'],
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1053,13 +1087,14 @@
      * Returns homologs for a gene
      * @param {String} id id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
-     * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {module:model/String} opts.type P, O or LDO (paralog, ortholog or least-diverged).
-     * @param {String} opts.homologTaxon Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default
+     * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {String} opts.homologTaxon Taxon CURIE of homolog, e.g. NCBITaxon:9606. Can be intermediate note, includes inferred by default
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {module:api/BioentityApi~getGeneHomologAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1077,13 +1112,14 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
-        'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'type': opts['type'],
-        'homolog_taxon': opts['homologTaxon'],
+        'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'homolog_taxon': opts['homologTaxon'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows'],
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects']
       };
       var headerParams = {
       };
@@ -1114,11 +1150,12 @@
      * Returns interactions for a gene
      * @param {String} id id, e.g. NCBIGene:3630. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGeneInteractionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1136,11 +1173,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1171,11 +1209,12 @@
      * Returns gene object
      * @param {String} id id, e.g. NCBIGene:84570
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGeneObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Gene>}
      */
@@ -1193,11 +1232,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1228,11 +1268,12 @@
      * Returns phenotypes associated with gene
      * @param {String} id CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenePhenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getGenePhenotypeAssociations = function(id, opts, callback) {
@@ -1249,11 +1290,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1284,11 +1326,12 @@
      * TODO Returns expression events for a gene
      * @param {String} id CURIE identifier of gene, e.g. NCBIGene:4750. Equivalent IDs can be used with same results
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenePublicationListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1306,11 +1349,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1341,11 +1385,12 @@
      * TODO Returns gene product object
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGeneproductObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getGeneproductObject = function(id, opts, callback) {
@@ -1362,11 +1407,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1397,11 +1443,12 @@
      * Returns associations for an entity regardless of the type
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenericAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1419,11 +1466,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1454,11 +1502,12 @@
      * TODO Returns object of any type
      * @param {String} id id, e.g. NCBIGene:84570
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenericObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/BioObject>}
      */
@@ -1476,11 +1525,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1511,11 +1561,12 @@
      * Returns diseases associated with a genotype
      * @param {String} id CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-4286 (if non-human will return models)
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenotypeDiseaseAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1533,11 +1584,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1568,11 +1620,12 @@
      * Returns genes associated with a genotype
      * @param {String} id CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenotypeGeneAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1590,11 +1643,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1626,11 +1680,12 @@
      * Genotypes may be related to one another according to the GENO model
      * @param {String} id CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenotypeGenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1648,11 +1703,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1684,11 +1740,12 @@
      * The genotype object will have the following association sets populated:   * gene  * phenotype  * disease
      * @param {String} id CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-6607
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenotypeObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Genotype>}
      */
@@ -1706,11 +1763,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1741,11 +1799,12 @@
      * Returns phenotypes associated with a genotype
      * @param {String} id CURIE identifier of genotype, e.g. ZFIN:ZDB-FISH-150901-4286
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGenotypePhenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -1763,11 +1822,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1798,11 +1858,12 @@
      * TODO Returns associated phenotypes
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGotermGeneAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -1820,11 +1881,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1855,11 +1917,12 @@
      * TODO Returns GO class object
      * @param {String} id GO class CURIE identifier, e.g GO:0016301 (kinase activity)
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGotermObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getGotermObject = function(id, opts, callback) {
@@ -1876,11 +1939,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1911,11 +1975,12 @@
      * TODO Returns associated phenotypes
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getGotermPhenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -1933,11 +1998,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -1968,11 +2034,12 @@
      * Returns associations between a lit entity and a disease
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getLiteratureDiseaseAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -1990,11 +2057,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2025,11 +2093,12 @@
      * Returns associations between a lit entity and a gene
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getLiteratureGeneAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2047,11 +2116,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2082,11 +2152,12 @@
      * Returns associations between a lit entity and a genotype
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getLiteratureGenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2104,11 +2175,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2140,11 +2212,12 @@
      * Individuals may typically encompass patients, but can be individuals of any species
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getParentObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getParentObject = function(id, opts, callback) {
@@ -2161,11 +2234,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2197,11 +2271,12 @@
      * Investigations encompass clinical trials, molecular biology experiments or any kind of study
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getParentObject_0Callback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getParentObject_0 = function(id, opts, callback) {
@@ -2218,11 +2293,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2253,11 +2329,12 @@
      * TODO Returns list of genes associated with a pathway
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPathwayGeneAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2275,11 +2352,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2310,11 +2388,12 @@
      * TODO Returns pathway object
      * @param {String} id CURIE any pathway element. May be a GO ID or a pathway database ID
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPathwayObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getPathwayObject = function(id, opts, callback) {
@@ -2331,11 +2410,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2366,11 +2446,12 @@
      * TODO Returns associations to participants (molecules, etc) for a pathway
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPathwayParticipantAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2388,11 +2469,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2424,11 +2506,12 @@
      * Example IDs:   * ZP:0004204   * MP:0008521 abnormal Bowman membrane  For example, *abnormal limb development* will map to *limb*
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPhenotypeAnatomyAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/NamedObject>}
      */
@@ -2446,11 +2529,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2482,11 +2566,12 @@
      * This may come from a combination of asserted knowledge (e.g. abnormal levels of metabolite to corresponding GO activity) or from data-driven approach (cf Translator)  Results are typically represented as GO classes
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPhenotypeFunctionAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2504,11 +2589,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2538,41 +2624,43 @@
     /**
      * Returns gene ids for all genes for a particular phenotype in a taxon
      * For example, + NCBITaxon:10090 (mouse)
-     * @param {String} taxid Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus)
      * @param {String} id Pheno class CURIE identifier, e.g  MP:0001569 (abnormal circulating bilirubin level)
+     * @param {String} taxid Species or high level taxon grouping, e.g  NCBITaxon:10090 (Mus musculus)
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPhenotypeGeneAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.getPhenotypeGeneAssociations = function(taxid, id, opts, callback) {
+    this.getPhenotypeGeneAssociations = function(id, taxid, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'taxid' is set
-      if (taxid == undefined || taxid == null) {
-        throw "Missing the required parameter 'taxid' when calling getPhenotypeGeneAssociations";
-      }
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
         throw "Missing the required parameter 'id' when calling getPhenotypeGeneAssociations";
       }
 
+      // verify the required parameter 'taxid' is set
+      if (taxid == undefined || taxid == null) {
+        throw "Missing the required parameter 'taxid' when calling getPhenotypeGeneAssociations";
+      }
+
 
       var pathParams = {
-        'taxid': taxid,
-        'id': id
+        'id': id,
+        'taxid': taxid
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2603,11 +2691,12 @@
      * TODO Returns associated phenotypes
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPhenotypeGeneAssociations_0Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2625,11 +2714,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2660,11 +2750,12 @@
      * TODO Returns phenotype class object
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPhenotypeObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getPhenotypeObject = function(id, opts, callback) {
@@ -2681,11 +2772,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2717,11 +2809,12 @@
      * Includes phenologs, as well as equivalent phenotypes in other species
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPhenotypePhenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2739,11 +2832,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2774,11 +2868,12 @@
      * TODO Returns publication object
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getPubObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getPubObject = function(id, opts, callback) {
@@ -2795,11 +2890,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2830,11 +2926,12 @@
      * TODO Returns seqfeature
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getSequenceFeatureObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getSequenceFeatureObject = function(id, opts, callback) {
@@ -2851,11 +2948,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2887,11 +2985,12 @@
      * E.g. between pesticide and occupational exposure class
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getSubstanceExposuresCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2909,11 +3008,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -2945,11 +3045,12 @@
      * Interactions can encompass drugs or environments
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getSubstanceInteractionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -2967,11 +3068,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3002,11 +3104,12 @@
      * TODO Returns substance entity
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getSubstanceObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Substance>}
      */
@@ -3024,11 +3127,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3060,11 +3164,12 @@
      * Examples relationships:   * substance is a metabolite of a process  * substance is synthesized by a process  * substance is modified by an activity  * substance elicits a response program/pathway  * substance is transported by activity or pathway  For example, CHEBI:40036 (amitrole)
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getSubstanceParticipantInAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -3082,11 +3187,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3118,11 +3224,12 @@
      * E.g. metabolite-of, tautomer-of, parent-of, ...
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getSubstanceRelationshipsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -3140,11 +3247,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3176,11 +3284,12 @@
      * Roles may be human-oriented (e.g. pesticide) or molecular (e.g. enzyme inhibitor)
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getSubstanceRoleAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -3198,11 +3307,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3233,11 +3343,12 @@
      * TODO Returns associations between given drug and targets
      * @param {String} id 
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getSubstanceTargetAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/Association>}
      */
@@ -3255,11 +3366,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3290,11 +3402,12 @@
      * Returns genes associated with a variant
      * @param {String} id CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getVariantGeneAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -3312,11 +3425,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3347,11 +3461,12 @@
      * Returns genotypes associated with a variant
      * @param {String} id CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getVariantGenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -3369,11 +3484,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3404,11 +3520,12 @@
      * TODO Returns sequence variant entity
      * @param {String} id CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getVariantObjectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.getVariantObject = function(id, opts, callback) {
@@ -3425,11 +3542,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };
@@ -3460,11 +3578,12 @@
      * Returns phenotypes associated with a variant
      * @param {String} id CURIE identifier of variant, e.g. ZFIN:ZDB-ALT-010427-8, ClinVarVariant:39783
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
-     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {Boolean} opts.excludeAutomaticAssertions If set, excludes associations that involve IEAs (ECO:0000501)
      * @param {Boolean} opts.unselectEvidence If set, excludes evidence objects in response
+     * @param {Array.<String>} opts.slim Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     * @param {Boolean} opts.fetchObjects If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload (default to true)
      * @param {Boolean} opts.useCompactAssociations If true, returns results in compact associations format
+     * @param {Integer} opts.rows number of rows (default to 20)
      * @param {module:api/BioentityApi~getVariantPhenotypeAssociationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/AssociationResults>}
      */
@@ -3482,11 +3601,12 @@
         'id': id
       };
       var queryParams = {
-        'fetch_objects': opts['fetchObjects'],
-        'rows': opts['rows'],
         'exclude_automatic_assertions': opts['excludeAutomaticAssertions'],
         'unselect_evidence': opts['unselectEvidence'],
-        'use_compact_associations': opts['useCompactAssociations']
+        'slim': this.apiClient.buildCollectionParam(opts['slim'], 'multi'),
+        'fetch_objects': opts['fetchObjects'],
+        'use_compact_associations': opts['useCompactAssociations'],
+        'rows': opts['rows']
       };
       var headerParams = {
       };

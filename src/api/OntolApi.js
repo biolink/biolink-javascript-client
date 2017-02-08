@@ -66,25 +66,25 @@
 
     /**
      * Calculates information content
-     * @param {String} objectCategory 
      * @param {String} subjectTaxon 
+     * @param {String} objectCategory 
      * @param {String} subjectCategory 
      * @param {Object} opts Optional parameters
      * @param {String} opts.evidence Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                     
      * @param {module:api/OntolApi~getInformationContentResourceCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.getInformationContentResource = function(objectCategory, subjectTaxon, subjectCategory, opts, callback) {
+    this.getInformationContentResource = function(subjectTaxon, objectCategory, subjectCategory, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'objectCategory' is set
-      if (objectCategory == undefined || objectCategory == null) {
-        throw "Missing the required parameter 'objectCategory' when calling getInformationContentResource";
-      }
 
       // verify the required parameter 'subjectTaxon' is set
       if (subjectTaxon == undefined || subjectTaxon == null) {
         throw "Missing the required parameter 'subjectTaxon' when calling getInformationContentResource";
+      }
+
+      // verify the required parameter 'objectCategory' is set
+      if (objectCategory == undefined || objectCategory == null) {
+        throw "Missing the required parameter 'objectCategory' when calling getInformationContentResource";
       }
 
       // verify the required parameter 'subjectCategory' is set
@@ -94,8 +94,8 @@
 
 
       var pathParams = {
-        'object_category': objectCategory,
         'subject_taxon': subjectTaxon,
+        'object_category': objectCategory,
         'subject_category': subjectCategory
       };
       var queryParams = {

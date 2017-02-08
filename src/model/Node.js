@@ -71,26 +71,26 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('lbl')) {
-        obj['lbl'] = ApiClient.convertToType(data['lbl'], 'String');
-      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
+      if (data.hasOwnProperty('lbl')) {
+        obj['lbl'] = ApiClient.convertToType(data['lbl'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * human readable label, maps to rdfs:label
-   * @member {String} lbl
-   */
-  exports.prototype['lbl'] = undefined;
-  /**
    * ID or CURIE
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
+  /**
+   * human readable label, maps to rdfs:label
+   * @member {String} lbl
+   */
+  exports.prototype['lbl'] = undefined;
 
 
 

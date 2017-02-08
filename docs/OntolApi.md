@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getInformationContentResource"></a>
 # **getInformationContentResource**
-> getInformationContentResource(objectCategory, subjectTaxon, subjectCategory, opts)
+> getInformationContentResource(subjectTaxon, objectCategory, subjectCategory, opts)
 
 Calculates information content
 
@@ -19,9 +19,9 @@ var BioLinkApi = require('bio_link_api');
 
 var apiInstance = new BioLinkApi.OntolApi();
 
-var objectCategory = "objectCategory_example"; // String | 
-
 var subjectTaxon = "subjectTaxon_example"; // String | 
+
+var objectCategory = "objectCategory_example"; // String | 
 
 var subjectCategory = "subjectCategory_example"; // String | 
 
@@ -36,15 +36,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.getInformationContentResource(objectCategory, subjectTaxon, subjectCategory, opts, callback);
+apiInstance.getInformationContentResource(subjectTaxon, objectCategory, subjectCategory, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **objectCategory** | **String**|  | 
  **subjectTaxon** | **String**|  | 
+ **objectCategory** | **String**|  | 
  **subjectCategory** | **String**|  | 
  **evidence** | **String**| Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.                      | [optional] 
 

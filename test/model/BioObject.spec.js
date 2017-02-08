@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.BioObject);
     });
 
-    it('should have the property xrefs (base name: "xrefs")', function() {
-      // uncomment below and update the code to test the property xrefs
+    it('should have the property taxon (base name: "taxon")', function() {
+      // uncomment below and update the code to test the property taxon
       //var instane = new BioLinkApi.BioObject();
       //expect(instance).to.be();
     });
 
-    it('should have the property taxon (base name: "taxon")', function() {
-      // uncomment below and update the code to test the property taxon
+    it('should have the property xrefs (base name: "xrefs")', function() {
+      // uncomment below and update the code to test the property xrefs
       //var instane = new BioLinkApi.BioObject();
       //expect(instance).to.be();
     });

@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.AbstractPropertyValue);
     });
 
-    it('should have the property val (base name: "val")', function() {
-      // uncomment below and update the code to test the property val
+    it('should have the property pred (base name: "pred")', function() {
+      // uncomment below and update the code to test the property pred
       //var instane = new BioLinkApi.AbstractPropertyValue();
       //expect(instance).to.be();
     });
 
-    it('should have the property pred (base name: "pred")', function() {
-      // uncomment below and update the code to test the property pred
+    it('should have the property val (base name: "val")', function() {
+      // uncomment below and update the code to test the property val
       //var instane = new BioLinkApi.AbstractPropertyValue();
       //expect(instance).to.be();
     });

@@ -88,145 +88,144 @@
       obj = obj || new exports();
 
       BioObject.constructFromObject(data, obj);
-      if (data.hasOwnProperty('pathway_associations')) {
-        obj['pathway_associations'] = ApiClient.convertToType(data['pathway_associations'], [Association]);
-      }
-      if (data.hasOwnProperty('genotype_associations')) {
-        obj['genotype_associations'] = ApiClient.convertToType(data['genotype_associations'], [Association]);
-      }
-      if (data.hasOwnProperty('full_name')) {
-        obj['full_name'] = ApiClient.convertToType(data['full_name'], 'String');
-      }
-      if (data.hasOwnProperty('sequence_features')) {
-        obj['sequence_features'] = ApiClient.convertToType(data['sequence_features'], [SequenceFeature]);
-      }
-      if (data.hasOwnProperty('function_associations')) {
-        obj['function_associations'] = ApiClient.convertToType(data['function_associations'], [Association]);
-      }
-      if (data.hasOwnProperty('interaction_associations')) {
-        obj['interaction_associations'] = ApiClient.convertToType(data['interaction_associations'], [Association]);
-      }
-      if (data.hasOwnProperty('transcripts')) {
-        obj['transcripts'] = ApiClient.convertToType(data['transcripts'], [Transcript]);
-      }
-      if (data.hasOwnProperty('literature_associations')) {
-        obj['literature_associations'] = ApiClient.convertToType(data['literature_associations'], [Association]);
-      }
-      if (data.hasOwnProperty('summaries')) {
-        obj['summaries'] = ApiClient.convertToType(data['summaries'], [SummaryPropertyValue]);
-      }
       if (data.hasOwnProperty('chromosome')) {
         obj['chromosome'] = Chromosome.constructFromObject(data['chromosome']);
-      }
-      if (data.hasOwnProperty('disease_associations')) {
-        obj['disease_associations'] = ApiClient.convertToType(data['disease_associations'], [Association]);
-      }
-      if (data.hasOwnProperty('phenotype_associations')) {
-        obj['phenotype_associations'] = ApiClient.convertToType(data['phenotype_associations'], [Association]);
-      }
-      if (data.hasOwnProperty('homology_associations')) {
-        obj['homology_associations'] = ApiClient.convertToType(data['homology_associations'], [Association]);
       }
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
       }
-      if (data.hasOwnProperty('systematic_name')) {
-        obj['systematic_name'] = ApiClient.convertToType(data['systematic_name'], 'String');
+      if (data.hasOwnProperty('disease_associations')) {
+        obj['disease_associations'] = ApiClient.convertToType(data['disease_associations'], [Association]);
       }
       if (data.hasOwnProperty('families')) {
         obj['families'] = ApiClient.convertToType(data['families'], [NamedObject]);
+      }
+      if (data.hasOwnProperty('full_name')) {
+        obj['full_name'] = ApiClient.convertToType(data['full_name'], 'String');
+      }
+      if (data.hasOwnProperty('function_associations')) {
+        obj['function_associations'] = ApiClient.convertToType(data['function_associations'], [Association]);
+      }
+      if (data.hasOwnProperty('genotype_associations')) {
+        obj['genotype_associations'] = ApiClient.convertToType(data['genotype_associations'], [Association]);
+      }
+      if (data.hasOwnProperty('homology_associations')) {
+        obj['homology_associations'] = ApiClient.convertToType(data['homology_associations'], [Association]);
+      }
+      if (data.hasOwnProperty('interaction_associations')) {
+        obj['interaction_associations'] = ApiClient.convertToType(data['interaction_associations'], [Association]);
+      }
+      if (data.hasOwnProperty('literature_associations')) {
+        obj['literature_associations'] = ApiClient.convertToType(data['literature_associations'], [Association]);
+      }
+      if (data.hasOwnProperty('pathway_associations')) {
+        obj['pathway_associations'] = ApiClient.convertToType(data['pathway_associations'], [Association]);
+      }
+      if (data.hasOwnProperty('phenotype_associations')) {
+        obj['phenotype_associations'] = ApiClient.convertToType(data['phenotype_associations'], [Association]);
+      }
+      if (data.hasOwnProperty('sequence_features')) {
+        obj['sequence_features'] = ApiClient.convertToType(data['sequence_features'], [SequenceFeature]);
+      }
+      if (data.hasOwnProperty('summaries')) {
+        obj['summaries'] = ApiClient.convertToType(data['summaries'], [SummaryPropertyValue]);
+      }
+      if (data.hasOwnProperty('systematic_name')) {
+        obj['systematic_name'] = ApiClient.convertToType(data['systematic_name'], 'String');
+      }
+      if (data.hasOwnProperty('transcripts')) {
+        obj['transcripts'] = ApiClient.convertToType(data['transcripts'], [Transcript]);
       }
     }
     return obj;
   }
 
   /**
-   * Assocations to pathways in which this gene is involved, including LEGO models
-   * @member {Array.<module:model/Association>} pathway_associations
-   */
-  exports.prototype['pathway_associations'] = undefined;
-  /**
-   * associations to genotypes in which this gene is altered
-   * @member {Array.<module:model/Association>} genotype_associations
-   */
-  exports.prototype['genotype_associations'] = undefined;
-  /**
-   * full name, e.g. Synaptosome Associated Protein 29
-   * @member {String} full_name
-   */
-  exports.prototype['full_name'] = undefined;
-  /**
-   * Sequence feature representing particular instance on a genome
-   * @member {Array.<module:model/SequenceFeature>} sequence_features
-   */
-  exports.prototype['sequence_features'] = undefined;
-  /**
-   * GO assocations for wild type gene
-   * @member {Array.<module:model/Association>} function_associations
-   */
-  exports.prototype['function_associations'] = undefined;
-  /**
-   * associations to genes that interact (may be physical or genetic)
-   * @member {Array.<module:model/Association>} interaction_associations
-   */
-  exports.prototype['interaction_associations'] = undefined;
-  /**
-   * All transcripts belonging to this gene
-   * @member {Array.<module:model/Transcript>} transcripts
-   */
-  exports.prototype['transcripts'] = undefined;
-  /**
-   * publications for this gene
-   * @member {Array.<module:model/Association>} literature_associations
-   */
-  exports.prototype['literature_associations'] = undefined;
-  /**
-   * Attributed textual summaries
-   * @member {Array.<module:model/SummaryPropertyValue>} summaries
-   */
-  exports.prototype['summaries'] = undefined;
-  /**
    * chromosome on which this gene is located. This may be redundant with information in sequence_feature objects but is included here for convenience
    * @member {module:model/Chromosome} chromosome
    */
   exports.prototype['chromosome'] = undefined;
-  /**
-   * diseases associated with alterations of gene
-   * @member {Array.<module:model/Association>} disease_associations
-   */
-  exports.prototype['disease_associations'] = undefined;
-  /**
-   * phenotypes associated with alterations of gene
-   * @member {Array.<module:model/Association>} phenotype_associations
-   */
-  exports.prototype['phenotype_associations'] = undefined;
-  /**
-   * orthology and paralogy assocations for this gene
-   * @member {Array.<module:model/Association>} homology_associations
-   */
-  exports.prototype['homology_associations'] = undefined;
   /**
    * full text description
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
   /**
-   * E.g. SPBC428.08c for clr4 in PomBase
-   * @member {String} systematic_name
+   * diseases associated with alterations of gene
+   * @member {Array.<module:model/Association>} disease_associations
    */
-  exports.prototype['systematic_name'] = undefined;
+  exports.prototype['disease_associations'] = undefined;
   /**
    * Families, superfamilies etc to which these gene belongs
    * @member {Array.<module:model/NamedObject>} families
    */
   exports.prototype['families'] = undefined;
+  /**
+   * full name, e.g. Synaptosome Associated Protein 29
+   * @member {String} full_name
+   */
+  exports.prototype['full_name'] = undefined;
+  /**
+   * GO assocations for wild type gene
+   * @member {Array.<module:model/Association>} function_associations
+   */
+  exports.prototype['function_associations'] = undefined;
+  /**
+   * associations to genotypes in which this gene is altered
+   * @member {Array.<module:model/Association>} genotype_associations
+   */
+  exports.prototype['genotype_associations'] = undefined;
+  /**
+   * orthology and paralogy assocations for this gene
+   * @member {Array.<module:model/Association>} homology_associations
+   */
+  exports.prototype['homology_associations'] = undefined;
+  /**
+   * associations to genes that interact (may be physical or genetic)
+   * @member {Array.<module:model/Association>} interaction_associations
+   */
+  exports.prototype['interaction_associations'] = undefined;
+  /**
+   * publications for this gene
+   * @member {Array.<module:model/Association>} literature_associations
+   */
+  exports.prototype['literature_associations'] = undefined;
+  /**
+   * Assocations to pathways in which this gene is involved, including LEGO models
+   * @member {Array.<module:model/Association>} pathway_associations
+   */
+  exports.prototype['pathway_associations'] = undefined;
+  /**
+   * phenotypes associated with alterations of gene
+   * @member {Array.<module:model/Association>} phenotype_associations
+   */
+  exports.prototype['phenotype_associations'] = undefined;
+  /**
+   * Sequence feature representing particular instance on a genome
+   * @member {Array.<module:model/SequenceFeature>} sequence_features
+   */
+  exports.prototype['sequence_features'] = undefined;
+  /**
+   * Attributed textual summaries
+   * @member {Array.<module:model/SummaryPropertyValue>} summaries
+   */
+  exports.prototype['summaries'] = undefined;
+  /**
+   * E.g. SPBC428.08c for clr4 in PomBase
+   * @member {String} systematic_name
+   */
+  exports.prototype['systematic_name'] = undefined;
+  /**
+   * All transcripts belonging to this gene
+   * @member {Array.<module:model/Transcript>} transcripts
+   */
+  exports.prototype['transcripts'] = undefined;
 
   // Implement BioObject interface:
   /**
-   * RDFS Label
-   * @member {String} label
+   * @member {Array.<String>} categories
    */
-exports.prototype['label'] = undefined;
+exports.prototype['categories'] = undefined;
 
   /**
    * ID or CURIE e.g. MGI:1201606
@@ -235,21 +234,22 @@ exports.prototype['label'] = undefined;
 exports.prototype['id'] = undefined;
 
   /**
-   * @member {Array.<String>} categories
+   * RDFS Label
+   * @member {String} label
    */
-exports.prototype['categories'] = undefined;
-
-  /**
-   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
-   * @member {Array.<String>} xrefs
-   */
-exports.prototype['xrefs'] = undefined;
+exports.prototype['label'] = undefined;
 
   /**
    * Taxon to which the object belongs
    * @member {module:model/Taxon} taxon
    */
 exports.prototype['taxon'] = undefined;
+
+  /**
+   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
+   * @member {Array.<String>} xrefs
+   */
+exports.prototype['xrefs'] = undefined;
 
 
 

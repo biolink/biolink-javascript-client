@@ -72,33 +72,33 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('label')) {
-        obj['label'] = ApiClient.convertToType(data['label'], 'String');
+      if (data.hasOwnProperty('categories')) {
+        obj['categories'] = ApiClient.convertToType(data['categories'], ['String']);
       }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
-      if (data.hasOwnProperty('categories')) {
-        obj['categories'] = ApiClient.convertToType(data['categories'], ['String']);
+      if (data.hasOwnProperty('label')) {
+        obj['label'] = ApiClient.convertToType(data['label'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * RDFS Label
-   * @member {String} label
+   * @member {Array.<String>} categories
    */
-  exports.prototype['label'] = undefined;
+  exports.prototype['categories'] = undefined;
   /**
    * ID or CURIE e.g. MGI:1201606
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
   /**
-   * @member {Array.<String>} categories
+   * RDFS Label
+   * @member {String} label
    */
-  exports.prototype['categories'] = undefined;
+  exports.prototype['label'] = undefined;
 
 
 

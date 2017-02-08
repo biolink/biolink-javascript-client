@@ -65,12 +65,6 @@
       //expect(instance).to.be.a(BioLinkApi.Substance);
     });
 
-    it('should have the property targetAssociations (base name: "target_associations")', function() {
-      // uncomment below and update the code to test the property targetAssociations
-      //var instane = new BioLinkApi.Substance();
-      //expect(instance).to.be();
-    });
-
     it('should have the property inchi (base name: "inchi")', function() {
       // uncomment below and update the code to test the property inchi
       //var instane = new BioLinkApi.Substance();
@@ -85,6 +79,12 @@
 
     it('should have the property smiles (base name: "smiles")', function() {
       // uncomment below and update the code to test the property smiles
+      //var instane = new BioLinkApi.Substance();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targetAssociations (base name: "target_associations")', function() {
+      // uncomment below and update the code to test the property targetAssociations
       //var instane = new BioLinkApi.Substance();
       //expect(instance).to.be();
     });

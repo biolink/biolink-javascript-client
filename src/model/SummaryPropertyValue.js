@@ -79,16 +79,16 @@
 
   // Implement AbstractPropertyValue interface:
   /**
-   * value part
-   * @member {String} val
-   */
-exports.prototype['val'] = undefined;
-
-  /**
    * predicate (attribute) part
    * @member {String} pred
    */
 exports.prototype['pred'] = undefined;
+
+  /**
+   * value part
+   * @member {String} val
+   */
+exports.prototype['val'] = undefined;
 
   /**
    * Xrefs provenance for property-value

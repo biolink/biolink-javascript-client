@@ -71,14 +71,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property subject (base name: "subject")', function() {
-      // uncomment below and update the code to test the property subject
+    it('should have the property relation (base name: "relation")', function() {
+      // uncomment below and update the code to test the property relation
       //var instane = new BioLinkApi.CompactAssociationSet();
       //expect(instance).to.be();
     });
 
-    it('should have the property relation (base name: "relation")', function() {
-      // uncomment below and update the code to test the property relation
+    it('should have the property subject (base name: "subject")', function() {
+      // uncomment below and update the code to test the property subject
       //var instane = new BioLinkApi.CompactAssociationSet();
       //expect(instance).to.be();
     });

@@ -65,14 +65,14 @@
       //expect(instance).to.be.a(BioLinkApi.Node);
     });
 
-    it('should have the property lbl (base name: "lbl")', function() {
-      // uncomment below and update the code to test the property lbl
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
       //var instane = new BioLinkApi.Node();
       //expect(instance).to.be();
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
+    it('should have the property lbl (base name: "lbl")', function() {
+      // uncomment below and update the code to test the property lbl
       //var instane = new BioLinkApi.Node();
       //expect(instance).to.be();
     });

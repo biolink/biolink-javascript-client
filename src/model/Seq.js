@@ -76,49 +76,48 @@
       obj = obj || new exports();
 
       BioObject.constructFromObject(data, obj);
+      if (data.hasOwnProperty('alphabet')) {
+        obj['alphabet'] = ApiClient.convertToType(data['alphabet'], 'String');
+      }
       if (data.hasOwnProperty('md5checksum')) {
         obj['md5checksum'] = ApiClient.convertToType(data['md5checksum'], 'String');
-      }
-      if (data.hasOwnProperty('seqlen')) {
-        obj['seqlen'] = ApiClient.convertToType(data['seqlen'], 'String');
       }
       if (data.hasOwnProperty('residues')) {
         obj['residues'] = ApiClient.convertToType(data['residues'], 'String');
       }
-      if (data.hasOwnProperty('alphabet')) {
-        obj['alphabet'] = ApiClient.convertToType(data['alphabet'], 'String');
+      if (data.hasOwnProperty('seqlen')) {
+        obj['seqlen'] = ApiClient.convertToType(data['seqlen'], 'String');
       }
     }
     return obj;
   }
 
   /**
+   * one of: DNA, RNA or AA
+   * @member {String} alphabet
+   */
+  exports.prototype['alphabet'] = undefined;
+  /**
    * checksum
    * @member {String} md5checksum
    */
   exports.prototype['md5checksum'] = undefined;
-  /**
-   * length of sequence
-   * @member {String} seqlen
-   */
-  exports.prototype['seqlen'] = undefined;
   /**
    * string representing sequence of residues
    * @member {String} residues
    */
   exports.prototype['residues'] = undefined;
   /**
-   * one of: DNA, RNA or AA
-   * @member {String} alphabet
+   * length of sequence
+   * @member {String} seqlen
    */
-  exports.prototype['alphabet'] = undefined;
+  exports.prototype['seqlen'] = undefined;
 
   // Implement BioObject interface:
   /**
-   * RDFS Label
-   * @member {String} label
+   * @member {Array.<String>} categories
    */
-exports.prototype['label'] = undefined;
+exports.prototype['categories'] = undefined;
 
   /**
    * ID or CURIE e.g. MGI:1201606
@@ -127,21 +126,22 @@ exports.prototype['label'] = undefined;
 exports.prototype['id'] = undefined;
 
   /**
-   * @member {Array.<String>} categories
+   * RDFS Label
+   * @member {String} label
    */
-exports.prototype['categories'] = undefined;
-
-  /**
-   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
-   * @member {Array.<String>} xrefs
-   */
-exports.prototype['xrefs'] = undefined;
+exports.prototype['label'] = undefined;
 
   /**
    * Taxon to which the object belongs
    * @member {module:model/Taxon} taxon
    */
 exports.prototype['taxon'] = undefined;
+
+  /**
+   * Database cross-references. These are usually CURIEs, but may also be URLs. E.g. ENSEMBL:ENSG00000099940 
+   * @member {Array.<String>} xrefs
+   */
+exports.prototype['xrefs'] = undefined;
 
 
 

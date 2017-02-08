@@ -65,18 +65,6 @@
       //expect(instance).to.be.a(BioLinkApi.APageOfResults);
     });
 
-    it('should have the property perPage (base name: "per_page")', function() {
-      // uncomment below and update the code to test the property perPage
-      //var instane = new BioLinkApi.APageOfResults();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property total (base name: "total")', function() {
-      // uncomment below and update the code to test the property total
-      //var instane = new BioLinkApi.APageOfResults();
-      //expect(instance).to.be();
-    });
-
     it('should have the property page (base name: "page")', function() {
       // uncomment below and update the code to test the property page
       //var instane = new BioLinkApi.APageOfResults();
@@ -85,6 +73,18 @@
 
     it('should have the property pages (base name: "pages")', function() {
       // uncomment below and update the code to test the property pages
+      //var instane = new BioLinkApi.APageOfResults();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property perPage (base name: "per_page")', function() {
+      // uncomment below and update the code to test the property perPage
+      //var instane = new BioLinkApi.APageOfResults();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property total (base name: "total")', function() {
+      // uncomment below and update the code to test the property total
       //var instane = new BioLinkApi.APageOfResults();
       //expect(instance).to.be();
     });

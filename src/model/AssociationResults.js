@@ -75,36 +75,48 @@
       obj = obj || new exports();
 
       SearchResult.constructFromObject(data, obj);
-      if (data.hasOwnProperty('objects')) {
-        obj['objects'] = ApiClient.convertToType(data['objects'], ['String']);
+      if (data.hasOwnProperty('associations')) {
+        obj['associations'] = ApiClient.convertToType(data['associations'], [Association]);
       }
       if (data.hasOwnProperty('compact_associations')) {
         obj['compact_associations'] = ApiClient.convertToType(data['compact_associations'], [CompactAssociationSet]);
       }
-      if (data.hasOwnProperty('associations')) {
-        obj['associations'] = ApiClient.convertToType(data['associations'], [Association]);
+      if (data.hasOwnProperty('objects')) {
+        obj['objects'] = ApiClient.convertToType(data['objects'], ['String']);
       }
     }
     return obj;
   }
 
   /**
-   * List of distinct objects used
-   * @member {Array.<String>} objects
+   * Complete representation of full association object, plus evidence
+   * @member {Array.<module:model/Association>} associations
    */
-  exports.prototype['objects'] = undefined;
+  exports.prototype['associations'] = undefined;
   /**
    * Compact representation in which objects (e.g. phenotypes) are collected for subject-predicate pairs
    * @member {Array.<module:model/CompactAssociationSet>} compact_associations
    */
   exports.prototype['compact_associations'] = undefined;
   /**
-   * Complete representation of full association object, plus evidence
-   * @member {Array.<module:model/Association>} associations
+   * List of distinct objects used
+   * @member {Array.<String>} objects
    */
-  exports.prototype['associations'] = undefined;
+  exports.prototype['objects'] = undefined;
 
   // Implement SearchResult interface:
+  /**
+   * Mapping between field names and association counts
+   * @member {Object} facet_counts
+   */
+exports.prototype['facet_counts'] = undefined;
+
+  /**
+   * Populated in facet_pivots is passed
+   * @member {Object} facet_pivot
+   */
+exports.prototype['facet_pivot'] = undefined;
+
   /**
    * total number of associations matching query
    * @member {Integer} numFound
@@ -116,18 +128,6 @@ exports.prototype['numFound'] = undefined;
    * @member {Integer} start
    */
 exports.prototype['start'] = undefined;
-
-  /**
-   * Populated in facet_pivots is passed
-   * @member {Object} facet_pivot
-   */
-exports.prototype['facet_pivot'] = undefined;
-
-  /**
-   * Mapping between field names and association counts
-   * @member {Object} facet_counts
-   */
-exports.prototype['facet_counts'] = undefined;
 
 
 

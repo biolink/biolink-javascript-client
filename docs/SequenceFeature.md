@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**locations** | [**[SequenceLocation]**](SequenceLocation.md) |  | [optional] 
 **homologyAssociations** | [**[Association]**](Association.md) |  | [optional] 
+**locations** | [**[SequenceLocation]**](SequenceLocation.md) |  | [optional] 
 **seq** | [**Seq**](Seq.md) |  | [optional] 
 
 

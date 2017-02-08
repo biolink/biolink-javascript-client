@@ -214,23 +214,18 @@
 
     /**
      * Returns list of variant sets from a specified time period
-     * @param {Integer} day 
      * @param {Integer} year 
      * @param {Integer} month 
+     * @param {Integer} day 
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.perPage Results per page {error_msg} (default to 10)
      * @param {Integer} opts.page Page number (default to 1)
+     * @param {Integer} opts.perPage Results per page {error_msg} (default to 10)
      * @param {module:api/VariationsetApi~getVariantSetsArchiveCollectionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOfVariantSets}
      */
-    this.getVariantSetsArchiveCollection = function(day, year, month, opts, callback) {
+    this.getVariantSetsArchiveCollection = function(year, month, day, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'day' is set
-      if (day == undefined || day == null) {
-        throw "Missing the required parameter 'day' when calling getVariantSetsArchiveCollection";
-      }
 
       // verify the required parameter 'year' is set
       if (year == undefined || year == null) {
@@ -242,15 +237,20 @@
         throw "Missing the required parameter 'month' when calling getVariantSetsArchiveCollection";
       }
 
+      // verify the required parameter 'day' is set
+      if (day == undefined || day == null) {
+        throw "Missing the required parameter 'day' when calling getVariantSetsArchiveCollection";
+      }
+
 
       var pathParams = {
-        'day': day,
         'year': year,
-        'month': month
+        'month': month,
+        'day': day
       };
       var queryParams = {
-        'per_page': opts['perPage'],
-        'page': opts['page']
+        'page': opts['page'],
+        'per_page': opts['perPage']
       };
       var headerParams = {
       };
@@ -280,8 +280,8 @@
     /**
      * Returns list of variant sets
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.perPage Results per page {error_msg} (default to 10)
      * @param {Integer} opts.page Page number (default to 1)
+     * @param {Integer} opts.perPage Results per page {error_msg} (default to 10)
      * @param {module:api/VariationsetApi~getVariantSetsCollectionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOfVariantSets}
      */
@@ -293,8 +293,8 @@
       var pathParams = {
       };
       var queryParams = {
-        'per_page': opts['perPage'],
-        'page': opts['page']
+        'page': opts['page'],
+        'per_page': opts['perPage']
       };
       var headerParams = {
       };

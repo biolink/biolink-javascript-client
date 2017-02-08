@@ -65,8 +65,8 @@
       //expect(instance).to.be.a(BioLinkApi.Genotype);
     });
 
-    it('should have the property variantAssociations (base name: "variant_associations")', function() {
-      // uncomment below and update the code to test the property variantAssociations
+    it('should have the property diseaseAssociations (base name: "disease_associations")', function() {
+      // uncomment below and update the code to test the property diseaseAssociations
       //var instane = new BioLinkApi.Genotype();
       //expect(instance).to.be();
     });
@@ -83,8 +83,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property diseaseAssociations (base name: "disease_associations")', function() {
-      // uncomment below and update the code to test the property diseaseAssociations
+    it('should have the property variantAssociations (base name: "variant_associations")', function() {
+      // uncomment below and update the code to test the property variantAssociations
       //var instane = new BioLinkApi.Genotype();
       //expect(instance).to.be();
     });
